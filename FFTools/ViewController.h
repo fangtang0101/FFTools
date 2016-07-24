@@ -13,3 +13,10 @@
 
 @end
 
+@interface FFModelVC : NSObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *nameVC;
+
++(instancetype)ModelVCWithtitle:(NSString *)title nameVC:(NSString*)nameVC;
+@end
+

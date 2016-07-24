@@ -16,6 +16,8 @@
 		469010341D4300FD00F22725 /* FFToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 469010331D4300FD00F22725 /* FFToolsTests.m */; };
 		4690103F1D4300FD00F22725 /* FFToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4690103E1D4300FD00F22725 /* FFToolsUITests.m */; };
 		4690104E1D43016100F22725 /* FFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4690104D1D43016100F22725 /* FFRootViewController.m */; };
+		469010531D4314ED00F22725 /* FFStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469010511D4314ED00F22725 /* FFStringViewController.m */; };
+		469010541D4314ED00F22725 /* FFStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469010521D4314ED00F22725 /* FFStringViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		469010401D4300FD00F22725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4690104C1D43016100F22725 /* FFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRootViewController.h; sourceTree = "<group>"; };
 		4690104D1D43016100F22725 /* FFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRootViewController.m; sourceTree = "<group>"; };
+		469010501D4314ED00F22725 /* FFStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFStringViewController.h; sourceTree = "<group>"; };
+		469010511D4314ED00F22725 /* FFStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFStringViewController.m; sourceTree = "<group>"; };
+		469010521D4314ED00F22725 /* FFStringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFStringViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 		469010181D4300FC00F22725 /* FFTools */ = {
 			isa = PBXGroup;
 			children = (
+				4690104F1D4314CC00F22725 /* example */,
 				4690104C1D43016100F22725 /* FFRootViewController.h */,
 				4690104D1D43016100F22725 /* FFRootViewController.m */,
 				4690101C1D4300FC00F22725 /* AppDelegate.h */,
@@ -143,6 +149,16 @@
 				469010401D4300FD00F22725 /* Info.plist */,
 			);
 			path = FFToolsUITests;
+			sourceTree = "<group>";
+		};
+		4690104F1D4314CC00F22725 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				469010501D4314ED00F22725 /* FFStringViewController.h */,
+				469010511D4314ED00F22725 /* FFStringViewController.m */,
+				469010521D4314ED00F22725 /* FFStringViewController.xib */,
+			);
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469010291D4300FC00F22725 /* LaunchScreen.storyboard in Resources */,
+				469010541D4314ED00F22725 /* FFStringViewController.xib in Resources */,
 				469010261D4300FC00F22725 /* Assets.xcassets in Resources */,
 				469010241D4300FC00F22725 /* Main.storyboard in Resources */,
 			);
@@ -279,6 +296,7 @@
 				469010211D4300FC00F22725 /* ViewController.m in Sources */,
 				4690101E1D4300FC00F22725 /* AppDelegate.m in Sources */,
 				4690101B1D4300FC00F22725 /* main.m in Sources */,
+				469010531D4314ED00F22725 /* FFStringViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +522,7 @@
 				469010451D4300FD00F22725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		469010461D4300FD00F22725 /* Build configuration list for PBXNativeTarget "FFToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +531,7 @@
 				469010481D4300FD00F22725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		469010491D4300FD00F22725 /* Build configuration list for PBXNativeTarget "FFToolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +540,7 @@
 				4690104B1D4300FD00F22725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
