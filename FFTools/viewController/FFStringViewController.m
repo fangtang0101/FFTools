@@ -22,7 +22,6 @@
 - (void)creatInfo {
     self.title = @"string的各种用法";
     
-    NSString
 }
 
 

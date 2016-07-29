@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "FFStringViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewList;
 @property (nonatomic,strong) NSMutableArray *arrayList;
@@ -17,19 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //此处设置高度，性能更优哦
     self.tableViewList.rowHeight = 44;
-//    self.arrayList = @[@"string的用法汇总",@"这是第二个"].mutableCopy;
-    
+    self.title = @"试验场";
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"string的用法汇总" nameVC:@"FFStringViewController"]];
-    
-    
-    
-    
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"xib中实时显示颜色圆角等" nameVC:@"FFRealTimeChangeViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"果冻效果" nameVC:@"FFJElasticPullToRefreshViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"menu控件" nameVC:@"FFMenuViewController"]];
+
     //注册 是用在 cell里面的，傻了吧
-//    [self.tableViewList registerClass:[ViewController class] forCellReuseIdentifier:@"list"];
+    //  [self.tableViewList registerClass:[ViewController class] forCellReuseIdentifier:@"list"];
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayList.count;
@@ -38,9 +35,7 @@
 static  NSString *stringCell = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     FFModelVC *model = self.arrayList[indexPath.row];
-    
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:stringCell];
     if (!cell) {
         cell = [[UITableViewCell alloc]init];
@@ -48,19 +43,12 @@ static  NSString *stringCell = @"cell";
     cell.textLabel.text = model.title;
     cell.detailTextLabel.text = model.nameVC;
     return cell;
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     NSString *stringVC = ((FFModelVC*)self.arrayList[indexPath.row]).nameVC;
-    
-    
     UIViewController *VC = [[NSClassFromString(stringVC) alloc]init];
-    
-    FFStringViewController *VCMy  = [[FFStringViewController alloc]init];
-    
     [self.navigationController pushViewController:VC animated:YES];
     
 }
@@ -72,7 +60,6 @@ static  NSString *stringCell = @"cell";
         _arrayList = [NSMutableArray array];
     }
     return _arrayList;
-
 }
 
 
@@ -82,12 +69,10 @@ static  NSString *stringCell = @"cell";
 @implementation FFModelVC
 
 +(instancetype)ModelVCWithtitle:(NSString *)title nameVC:(NSString*)nameVC {
-    
     FFModelVC *obj = [[FFModelVC alloc]init];
     obj.title = title;
     obj.nameVC = nameVC;
     return obj;
-
 }
 
 
