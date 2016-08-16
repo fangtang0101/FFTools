@@ -23,7 +23,10 @@
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"xib中实时显示颜色圆角等" nameVC:@"FFRealTimeChangeViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"果冻效果" nameVC:@"FFJElasticPullToRefreshViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"menu控件" nameVC:@"FFMenuViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"header" nameVC:@"FFHeaderScollerViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"链式编程+函数式编程+RAC" nameVC:@"FFChainViewController"]];
 
+    
     //注册 是用在 cell里面的，傻了吧
     //  [self.tableViewList registerClass:[ViewController class] forCellReuseIdentifier:@"list"];
 }
