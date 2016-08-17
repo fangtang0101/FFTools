@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FFRunLoopViewController">
+            <connections>
+                <outlet property="labelTimer1" destination="eWh-Pr-4vg" id="FE9-yU-w1q"/>
+                <outlet property="switchTimer1" destination="6yL-kw-BZz" id="bCS-7y-XEb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="arF-Qu-3bv">
+                    <rect key="frame" x="10" y="100" width="150" height="150"/>
+                    <color key="backgroundColor" red="0.96525804920000002" green="0.89808621619999995" blue="0.256507453" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="KH6-PG-Z1a"/>
+                        <constraint firstAttribute="height" constant="150" id="UH6-DW-Wj9"/>
+                    </constraints>
+                    <string key="text">+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo
+此方法创建timer不会主动去只执行方法，需要我们手动创建runLoop去主动运行</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6yL-kw-BZz">
+                    <rect key="frame" x="190" y="100" width="51" height="31"/>
+                    <connections>
+                        <action selector="onclickSwitch:" destination="-1" eventType="valueChanged" id="RpS-0N-DqC"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-Pr-4vg">
+                    <rect key="frame" x="190" y="229" width="120" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开关开手动调用runLoop " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-C9-YuM">
+                    <rect key="frame" x="10" y="75" width="300" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手动调用RunLoop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOM-CO-5bW">
+                    <rect key="frame" x="190" y="71" width="120" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RunLoopMode选择" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnZ-N3-5IA">
+                    <rect key="frame" x="10" y="291" width="300" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tJb-Ux-MSd">
+                    <rect key="frame" x="10" y="322" width="300" height="29"/>
+                    <segments>
+                        <segment title="NSDefault"/>
+                        <segment title="UITracking"/>
+                        <segment title="CommonModes"/>
+                    </segments>
+                    <connections>
+                        <action selector="onclickSegment:" destination="-1" eventType="valueChanged" id="h7S-hR-KDu"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eWh-Pr-4vg" firstAttribute="bottom" secondItem="arF-Qu-3bv" secondAttribute="bottom" id="0rA-xr-wcJ"/>
+                <constraint firstItem="arF-Qu-3bv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="2eu-dd-Wld"/>
+                <constraint firstItem="arF-Qu-3bv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="70U-5p-5B1"/>
+                <constraint firstAttribute="trailing" secondItem="bOM-CO-5bW" secondAttribute="trailing" constant="10" id="9TY-NR-RVk"/>
+                <constraint firstItem="6yL-kw-BZz" firstAttribute="top" secondItem="arF-Qu-3bv" secondAttribute="top" id="FXm-2p-s5S"/>
+                <constraint firstItem="arF-Qu-3bv" firstAttribute="top" secondItem="zbV-C9-YuM" secondAttribute="bottom" constant="8" id="G7J-Ub-dXT"/>
+                <constraint firstItem="bOM-CO-5bW" firstAttribute="centerY" secondItem="zbV-C9-YuM" secondAttribute="centerY" id="L9Y-ep-hOM"/>
+                <constraint firstItem="bOM-CO-5bW" firstAttribute="leading" secondItem="6yL-kw-BZz" secondAttribute="leading" id="Oqf-Km-oYo"/>
+                <constraint firstItem="zbV-C9-YuM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Sif-qb-aGa"/>
+                <constraint firstAttribute="trailing" secondItem="pnZ-N3-5IA" secondAttribute="trailing" constant="10" id="XYa-lE-n2Q"/>
+                <constraint firstItem="tJb-Ux-MSd" firstAttribute="leading" secondItem="pnZ-N3-5IA" secondAttribute="leading" id="a9j-l3-iX3"/>
+                <constraint firstItem="tJb-Ux-MSd" firstAttribute="top" secondItem="pnZ-N3-5IA" secondAttribute="bottom" constant="10" id="bMq-lp-jb8"/>
+                <constraint firstAttribute="trailing" secondItem="eWh-Pr-4vg" secondAttribute="trailing" constant="10" id="ddn-hU-UF2"/>
+                <constraint firstItem="6yL-kw-BZz" firstAttribute="top" secondItem="bOM-CO-5bW" secondAttribute="bottom" constant="4" id="h4I-S1-HbP"/>
+                <constraint firstAttribute="trailing" secondItem="zbV-C9-YuM" secondAttribute="trailing" constant="10" id="noK-4s-FsO"/>
+                <constraint firstItem="6yL-kw-BZz" firstAttribute="leading" secondItem="arF-Qu-3bv" secondAttribute="trailing" constant="30" id="o3r-EB-Ir9"/>
+                <constraint firstItem="pnZ-N3-5IA" firstAttribute="top" secondItem="arF-Qu-3bv" secondAttribute="bottom" constant="41" id="qls-vQ-Dlt"/>
+                <constraint firstItem="eWh-Pr-4vg" firstAttribute="leading" secondItem="arF-Qu-3bv" secondAttribute="trailing" constant="30" id="uY4-16-feh"/>
+                <constraint firstItem="pnZ-N3-5IA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="wrP-tY-QeV"/>
+                <constraint firstItem="tJb-Ux-MSd" firstAttribute="trailing" secondItem="pnZ-N3-5IA" secondAttribute="trailing" id="wvh-2S-Ojg"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="183" y="231"/>
+        </view>
+    </objects>
+</document>

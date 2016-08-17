@@ -25,6 +25,11 @@
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"menu控件" nameVC:@"FFMenuViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"header" nameVC:@"FFHeaderScollerViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"链式编程+函数式编程+RAC" nameVC:@"FFChainViewController"]];
+    
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"RunLoop" nameVC:@"FFRunLoopViewController"]];
+
+    
+    
 
     
     //注册 是用在 cell里面的，傻了吧
@@ -65,9 +70,7 @@ static  NSString *stringCell = @"cell";
     return _arrayList;
 }
 
-
 @end
-
 
 @implementation FFModelVC
 
