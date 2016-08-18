@@ -14,6 +14,15 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchTimer1;
 @property (nonatomic,assign) NSUInteger countTimer;
 @property (nonatomic,copy) NSString *stringMode;
+
+
+@property (weak, nonatomic) IBOutlet UISwitch *switchTimer2;
+@property (weak, nonatomic) IBOutlet UILabel *labelTimer2;
+@property (nonatomic,strong) NSTimer *timer2;
+@property (nonatomic,assign) NSUInteger countTimer2;
+@property (nonatomic,assign) BOOL isMainThread;
+@property (nonatomic,strong) NSRunLoop *currentLoop;
+@property (nonatomic,strong) NSThread *threadTimer2;
 @end
 
 @implementation FFRunLoopViewController
@@ -30,7 +39,6 @@
 }
 
 - (IBAction)onclickSwitch:(UISwitch *)sender {
-    
     [self.timer1 invalidate];
     self.timer1 = nil;
     if (!self.timer1) {
@@ -44,7 +52,7 @@
     }
 }
 - (IBAction)onclickSegment:(UISegmentedControl *)sender {
-
+    
     if (sender.selectedSegmentIndex == 0) {
         self.stringMode = NSDefaultRunLoopMode;
     }else if (sender.selectedSegmentIndex == 1){
@@ -52,17 +60,65 @@
     }else if (sender.selectedSegmentIndex == 2){
         self.stringMode = NSRunLoopCommonModes;
     }
-    
     self.switchTimer1.on = YES;
-    
     [self onclickSwitch:self.switchTimer1];
 }
 
 -(void)run1 {
 //    NSLog(@"当前线程%@  当前RunLoop%@",[NSThread currentThread],[NSRunLoop currentRunLoop]);
     self.countTimer ++;
-    self.labelTimer1.text = [NSString stringWithFormat:@"runMethod %zd",self.countTimer];
+    self.labelTimer1.text = [NSString stringWithFormat:@"run1Method %zd",self.countTimer];
         NSLog(@"running方法===== %zd", self.countTimer);
 }
+
+#pragma mark -- 下面的一个实验
+- (IBAction)onlickSwitch2:(UISwitch *)sender {
+    
+    [self.timer2 invalidate];
+    self.timer2 = nil;
+    
+    
+    if (!self.timer2) {
+        self.timer2 =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(run2) userInfo:self repeats:YES];
+    }
+    if (sender.on) { //开关开了
+ 
+    }
+}
+-(void)run2 {
+    self.countTimer2 ++;
+    self.labelTimer2.text = [NSString stringWithFormat:@"run2Method %zd",self.countTimer2];
+    NSLog(@"running方法===== %zd", self.countTimer);
+}
+- (IBAction)onclickSegment2:(UISegmentedControl *)sender {
+    
+    self.switchTimer2.on = YES;
+    
+    if (sender.selectedSegmentIndex == 0) {
+        [self.threadTimer2 cancel];
+        self.threadTimer2 = nil;
+        self.currentLoop = nil;
+        [self onlickSwitch2:self.switchTimer2];
+    }else{
+        if (self.timer2) {
+            [self.timer2 invalidate];
+            self.timer2= nil;
+        }
+        if (!self.threadTimer2) {
+            self.threadTimer2 = [[NSThread alloc]initWithTarget:self selector:@selector(sonThread) object:nil];
+            [self.threadTimer2 start];
+        }
+//        [NSThread detachNewThreadSelector:@selector(sonThread) toTarget:self withObject:nil];
+    }
+}
+//子线程里开启
+-(void)sonThread {
+    
+    self.currentLoop = [NSRunLoop currentRunLoop];
+    [self onlickSwitch2:self.switchTimer2];
+    [self.currentLoop run];
+
+}
+
 
 @end
