@@ -9,9 +9,9 @@
 #import "FFChainViewController.h"
 typedef NS_OPTIONS(NSUInteger, FFCaculatorMaker) {
     FFCaculatorMakerAdd = 0,
-    FFCaculatorMakerSub ,                  // used when UIControl isHighlighted is set
+    FFCaculatorMakerSub ,
     FFCaculatorMakerMui ,
-    FFCaculatorMakerDiv                     // flag usable by app (see below)
+    FFCaculatorMakerDiv
 };
 
 @interface FFChainViewController ()

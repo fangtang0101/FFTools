@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTimer2;
 @property (nonatomic,strong) NSTimer *timer2;
 @property (nonatomic,assign) NSUInteger countTimer2;
+@property (nonatomic,assign) NSUInteger countTimer3;
+
 @property (nonatomic,assign) BOOL isMainThread;
 @property (nonatomic,strong) NSRunLoop *currentLoop;
 @property (nonatomic,strong) NSThread *threadTimer2;
@@ -36,6 +38,7 @@
 //页面捕捉点击事件
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self timer1];
+    [self timer3];
 }
 
 - (IBAction)onclickSwitch:(UISwitch *)sender {
@@ -108,17 +111,39 @@
             self.threadTimer2 = [[NSThread alloc]initWithTarget:self selector:@selector(sonThread) object:nil];
             [self.threadTimer2 start];
         }
-//        [NSThread detachNewThreadSelector:@selector(sonThread) toTarget:self withObject:nil];
+//      [NSThread detachNewThreadSelector:@selector(sonThread) toTarget:self withObject:nil];
     }
 }
 //子线程里开启
 -(void)sonThread {
-    
     self.currentLoop = [NSRunLoop currentRunLoop];
     [self onlickSwitch2:self.switchTimer2];
     [self.currentLoop run];
-
 }
 
+-(void)timer3 {
+    //timer 的方法 (注意此方法在主线程中 会自动执行)
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(run3) userInfo:nil repeats:YES];
+    // but 如果实在子线程中 写这个写这个方法，默认是 没有一个RunLoop 去执行这个方法，所以需要你自己手动写 一个RunLoop去执行这个
+    
+    [NSThread detachNewThreadSelector:@selector(newThread) toTarget:self withObject:nil];
+    
+}
+
+-(void)newThread {
+    
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(run3) userInfo:nil repeats:YES];
+
+    //可以试试把上面的打开，下面的注释，-->结论在子线程中 不能
+    NSRunLoop *loop = [NSRunLoop currentRunLoop];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(run3) userInfo:nil repeats:YES];
+    [loop run];
+    
+}
+
+-(void)run3 {
+    self.countTimer3 ++;
+    NSLog(@"running方法3===== %zd", self.countTimer3);
+}
 
 @end
