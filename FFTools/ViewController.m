@@ -27,6 +27,10 @@
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"链式编程+函数式编程+RAC" nameVC:@"FFChainViewController"]];
     
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"RunLoop" nameVC:@"FFRunLoopViewController"]];
+    
+        [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"button随意切换" nameVC:@"FFButtonDemo"]];
+    
+    
 
     
     
