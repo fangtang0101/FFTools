@@ -56,6 +56,13 @@
 		4FEB515D1D4B205A00C6CA03 /* JElasticPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB51561D4B205A00C6CA03 /* JElasticPullToRefreshView.m */; };
 		4FEB515E1D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB51581D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m */; };
 		4FEB515F1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB515A1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m */; };
+		C34D3DE71DD5938B000AA196 /* FFToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DE51DD5938B000AA196 /* FFToastViewController.m */; };
+		C34D3DE81DD5938B000AA196 /* FFToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DE61DD5938B000AA196 /* FFToastViewController.xib */; };
+		C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEB1DD59484000AA196 /* FFRootWidget.m */; };
+		C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEE1DD59613000AA196 /* FFToastWidget.m */; };
+		C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DF01DD59630000AA196 /* FFToastWidget.xib */; };
+		C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */; };
+		C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +163,17 @@
 		4FEB51581D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
 		4FEB51591D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JElasticPullToRefresh.h"; sourceTree = "<group>"; };
 		4FEB515A1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
+		C34D3DE41DD5938B000AA196 /* FFToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToastViewController.h; sourceTree = "<group>"; };
+		C34D3DE51DD5938B000AA196 /* FFToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFToastViewController.m; sourceTree = "<group>"; };
+		C34D3DE61DD5938B000AA196 /* FFToastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFToastViewController.xib; sourceTree = "<group>"; };
+		C34D3DEA1DD59484000AA196 /* FFRootWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRootWidget.h; sourceTree = "<group>"; };
+		C34D3DEB1DD59484000AA196 /* FFRootWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRootWidget.m; sourceTree = "<group>"; };
+		C34D3DED1DD59613000AA196 /* FFToastWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToastWidget.h; sourceTree = "<group>"; };
+		C34D3DEE1DD59613000AA196 /* FFToastWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFToastWidget.m; sourceTree = "<group>"; };
+		C34D3DF01DD59630000AA196 /* FFToastWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFToastWidget.xib; sourceTree = "<group>"; };
+		C3AF2F311D87AC1100341C5D /* FFAutolayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAutolayoutViewController.h; sourceTree = "<group>"; };
+		C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAutolayoutViewController.m; sourceTree = "<group>"; };
+		C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFAutolayoutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +348,8 @@
 		4FEB51241D4B1F9C00C6CA03 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				C34D3DE31DD59354000AA196 /* Toast */,
+				C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */,
 				463DA5B01D75CE8F00F035A2 /* DemoButton */,
 				466408401D64A94400AF028A /* RunLoop */,
 				4F9AD1381D62D7F600E84FBB /* 链式编程 */,
@@ -395,6 +415,39 @@
 				4FEB515A1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m */,
 			);
 			path = JElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
+		C34D3DE31DD59354000AA196 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				C34D3DE91DD59459000AA196 /* View */,
+				C34D3DE41DD5938B000AA196 /* FFToastViewController.h */,
+				C34D3DE51DD5938B000AA196 /* FFToastViewController.m */,
+				C34D3DE61DD5938B000AA196 /* FFToastViewController.xib */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		C34D3DE91DD59459000AA196 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C34D3DEA1DD59484000AA196 /* FFRootWidget.h */,
+				C34D3DEB1DD59484000AA196 /* FFRootWidget.m */,
+				C34D3DED1DD59613000AA196 /* FFToastWidget.h */,
+				C34D3DEE1DD59613000AA196 /* FFToastWidget.m */,
+				C34D3DF01DD59630000AA196 /* FFToastWidget.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C3AF2F311D87AC1100341C5D /* FFAutolayoutViewController.h */,
+				C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */,
+				C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */,
+			);
+			path = DemoAutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,7 +561,9 @@
 				469010261D4300FC00F22725 /* Assets.xcassets in Resources */,
 				4FC46A811D4B2820009B38DC /* reload@2x.png in Resources */,
 				4FC46A7D1D4B2820009B38DC /* check_icon@2x.png in Resources */,
+				C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */,
 				463DA5B51D75CEAD00F035A2 /* FFButtonDemo.xib in Resources */,
+				C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */,
 				4FEB51471D4B1FF300C6CA03 /* FFStringViewController.xib in Resources */,
 				469010241D4300FC00F22725 /* Main.storyboard in Resources */,
 				4FC46A821D4B2820009B38DC /* search_icon.png in Resources */,
@@ -516,6 +571,7 @@
 				4FC46A7E1D4B2820009B38DC /* home_icon.png in Resources */,
 				4F2EF8FA1D5C611E004DB9CB /* FFHeaderScollerViewController.xib in Resources */,
 				4FEB51451D4B1FF300C6CA03 /* FFRealTimeChangeViewController.xib in Resources */,
+				C34D3DE81DD5938B000AA196 /* FFToastViewController.xib in Resources */,
 				4FC46A831D4B2820009B38DC /* search_icon@2x.png in Resources */,
 				463DA5BA1D75D5E500F035A2 /* FFChannalVedioView.xib in Resources */,
 				4F6574B61D5C6701007386AC /* 1.jpg in Resources */,
@@ -548,18 +604,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1F8FFD1D5C1A09009C6C78 /* FFPerson+Internal.m in Sources */,
+				C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */,
 				4F1F8FFC1D5C1A09009C6C78 /* FFPerson.m in Sources */,
 				4FEB51481D4B1FF300C6CA03 /* FFRealTimeChangeView.m in Sources */,
+				C34D3DE71DD5938B000AA196 /* FFToastViewController.m in Sources */,
 				4690104E1D43016100F22725 /* FFRootViewController.m in Sources */,
 				4FEB515B1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingView.m in Sources */,
 				463DA5B81D75D5D000F035A2 /* FFChannalVedioView.m in Sources */,
 				4FEB515E1D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m in Sources */,
 				463DA5B41D75CEAD00F035A2 /* FFButtonDemo.m in Sources */,
 				4F2EF8F91D5C611E004DB9CB /* FFHeaderScollerViewController.m in Sources */,
+				C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */,
 				4F9AD13C1D62D84D00E84FBB /* FFChainViewController.m in Sources */,
 				4FEB51491D4B1FF300C6CA03 /* FFRootView.m in Sources */,
 				469010211D4300FC00F22725 /* ViewController.m in Sources */,
 				4690101E1D4300FC00F22725 /* AppDelegate.m in Sources */,
+				C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */,
 				4FEB515C1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
 				4F1F8FFB1D5C1A09009C6C78 /* FFOther.m in Sources */,
 				4FEB514D1D4B203D00C6CA03 /* FFJElasticPullToRefreshViewController.m in Sources */,

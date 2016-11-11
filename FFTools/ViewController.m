@@ -28,12 +28,16 @@
     
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"RunLoop" nameVC:@"FFRunLoopViewController"]];
     
-        [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"button随意切换" nameVC:@"FFButtonDemo"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"button随意切换" nameVC:@"FFButtonDemo"]];
     
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"手动代码布局" nameVC:@"FFAutolayoutViewController"]];
     
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"toast" nameVC:@"FFToastViewController"]];
 
     
     
+    
+
 
     
     //注册 是用在 cell里面的，傻了吧

@@ -27,10 +27,8 @@
 @implementation FFChannalVedioView
 
 +(instancetype)creatChannalVedioView {
-    
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"FFChannalVedioView" owner:nil options:nil];
     return views.firstObject;
-
 }
 
 
@@ -57,12 +55,6 @@
         }
     }
 
-    
-    
-//    self.bool1 = YES;
-//    self.bool2 = YES;
-//    self.bool3 = NO;
-//    self.bool4 = YES;
     
     NSInteger count = 0 ;
     if (self.bool1) {

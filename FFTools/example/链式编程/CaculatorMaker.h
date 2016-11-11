@@ -21,6 +21,7 @@
 //下面为函数式编程的示例
 
 - (CaculatorMaker *)caculator:(NSUInteger(^)(NSUInteger result))caculator;
+
 - (CaculatorMaker*)equle:(BOOL(^)(NSUInteger result))operation;
 
 @end
