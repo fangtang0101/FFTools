@@ -61,6 +61,15 @@
 		C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEB1DD59484000AA196 /* FFRootWidget.m */; };
 		C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEE1DD59613000AA196 /* FFToastWidget.m */; };
 		C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DF01DD59630000AA196 /* FFToastWidget.xib */; };
+		C34D3DF51DD5A21C000AA196 /* FFChoosePicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */; };
+		C34D3DF91DD5AB07000AA196 /* FFChoosePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */; };
+		C34D3DFA1DD5AB07000AA196 /* FFChoosePicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */; };
+		C34D3DFD1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */; };
+		C34D3DFE1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */; };
+		C34D3E011DD5AEBE000AA196 /* FFActionSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */; };
+		C34D3E051DD5B3ED000AA196 /* FFChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E041DD5B3ED000AA196 /* FFChannelView.m */; };
+		C34D3E091DD5B69D000AA196 /* FFChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E071DD5B69D000AA196 /* FFChannelViewController.m */; };
+		C34D3E0A1DD5B69D000AA196 /* FFChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */; };
 		C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */; };
 		C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */; };
 /* End PBXBuildFile section */
@@ -171,6 +180,20 @@
 		C34D3DED1DD59613000AA196 /* FFToastWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToastWidget.h; sourceTree = "<group>"; };
 		C34D3DEE1DD59613000AA196 /* FFToastWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFToastWidget.m; sourceTree = "<group>"; };
 		C34D3DF01DD59630000AA196 /* FFToastWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFToastWidget.xib; sourceTree = "<group>"; };
+		C34D3DF31DD5A21C000AA196 /* FFChoosePicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChoosePicView.h; sourceTree = "<group>"; };
+		C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChoosePicView.m; sourceTree = "<group>"; };
+		C34D3DF61DD5AB07000AA196 /* FFChoosePicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChoosePicViewController.h; sourceTree = "<group>"; };
+		C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChoosePicViewController.m; sourceTree = "<group>"; };
+		C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChoosePicViewController.xib; sourceTree = "<group>"; };
+		C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@2x.png"; sourceTree = "<group>"; };
+		C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@3x.png"; sourceTree = "<group>"; };
+		C34D3DFF1DD5AEBE000AA196 /* FFActionSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActionSheetManager.h; sourceTree = "<group>"; };
+		C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActionSheetManager.m; sourceTree = "<group>"; };
+		C34D3E031DD5B3ED000AA196 /* FFChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChannelView.h; sourceTree = "<group>"; };
+		C34D3E041DD5B3ED000AA196 /* FFChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChannelView.m; sourceTree = "<group>"; };
+		C34D3E061DD5B69D000AA196 /* FFChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChannelViewController.h; sourceTree = "<group>"; };
+		C34D3E071DD5B69D000AA196 /* FFChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChannelViewController.m; sourceTree = "<group>"; };
+		C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChannelViewController.xib; sourceTree = "<group>"; };
 		C3AF2F311D87AC1100341C5D /* FFAutolayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAutolayoutViewController.h; sourceTree = "<group>"; };
 		C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAutolayoutViewController.m; sourceTree = "<group>"; };
 		C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFAutolayoutViewController.xib; sourceTree = "<group>"; };
@@ -348,6 +371,8 @@
 		4FEB51241D4B1F9C00C6CA03 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				C34D3E021DD5B2FB000AA196 /* ViewMark */,
+				C34D3DF21DD5A109000AA196 /* PicView */,
 				C34D3DE31DD59354000AA196 /* Toast */,
 				C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */,
 				463DA5B01D75CE8F00F035A2 /* DemoButton */,
@@ -438,6 +463,36 @@
 				C34D3DF01DD59630000AA196 /* FFToastWidget.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C34D3DF21DD5A109000AA196 /* PicView */ = {
+			isa = PBXGroup;
+			children = (
+				C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */,
+				C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */,
+				C34D3DF31DD5A21C000AA196 /* FFChoosePicView.h */,
+				C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */,
+				C34D3DF61DD5AB07000AA196 /* FFChoosePicViewController.h */,
+				C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */,
+				C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */,
+				C34D3DFF1DD5AEBE000AA196 /* FFActionSheetManager.h */,
+				C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */,
+			);
+			name = PicView;
+			path = picView;
+			sourceTree = "<group>";
+		};
+		C34D3E021DD5B2FB000AA196 /* ViewMark */ = {
+			isa = PBXGroup;
+			children = (
+				C34D3E031DD5B3ED000AA196 /* FFChannelView.h */,
+				C34D3E041DD5B3ED000AA196 /* FFChannelView.m */,
+				C34D3E061DD5B69D000AA196 /* FFChannelViewController.h */,
+				C34D3E071DD5B69D000AA196 /* FFChannelViewController.m */,
+				C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */,
+			);
+			name = ViewMark;
+			path = Viewmark;
 			sourceTree = "<group>";
 		};
 		C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */ = {
@@ -559,8 +614,11 @@
 				4FC46A7A1D4B2820009B38DC /* action_icon.png in Resources */,
 				4FC46A7C1D4B2820009B38DC /* check_icon.png in Resources */,
 				469010261D4300FC00F22725 /* Assets.xcassets in Resources */,
+				C34D3DFD1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png in Resources */,
 				4FC46A811D4B2820009B38DC /* reload@2x.png in Resources */,
+				C34D3DFA1DD5AB07000AA196 /* FFChoosePicViewController.xib in Resources */,
 				4FC46A7D1D4B2820009B38DC /* check_icon@2x.png in Resources */,
+				C34D3E0A1DD5B69D000AA196 /* FFChannelViewController.xib in Resources */,
 				C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */,
 				463DA5B51D75CEAD00F035A2 /* FFButtonDemo.xib in Resources */,
 				C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */,
@@ -572,6 +630,7 @@
 				4F2EF8FA1D5C611E004DB9CB /* FFHeaderScollerViewController.xib in Resources */,
 				4FEB51451D4B1FF300C6CA03 /* FFRealTimeChangeViewController.xib in Resources */,
 				C34D3DE81DD5938B000AA196 /* FFToastViewController.xib in Resources */,
+				C34D3DFE1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png in Resources */,
 				4FC46A831D4B2820009B38DC /* search_icon@2x.png in Resources */,
 				463DA5BA1D75D5E500F035A2 /* FFChannalVedioView.xib in Resources */,
 				4F6574B61D5C6701007386AC /* 1.jpg in Resources */,
@@ -608,14 +667,19 @@
 				4F1F8FFC1D5C1A09009C6C78 /* FFPerson.m in Sources */,
 				4FEB51481D4B1FF300C6CA03 /* FFRealTimeChangeView.m in Sources */,
 				C34D3DE71DD5938B000AA196 /* FFToastViewController.m in Sources */,
+				C34D3DF91DD5AB07000AA196 /* FFChoosePicViewController.m in Sources */,
 				4690104E1D43016100F22725 /* FFRootViewController.m in Sources */,
+				C34D3E051DD5B3ED000AA196 /* FFChannelView.m in Sources */,
 				4FEB515B1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingView.m in Sources */,
 				463DA5B81D75D5D000F035A2 /* FFChannalVedioView.m in Sources */,
 				4FEB515E1D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m in Sources */,
 				463DA5B41D75CEAD00F035A2 /* FFButtonDemo.m in Sources */,
+				C34D3DF51DD5A21C000AA196 /* FFChoosePicView.m in Sources */,
 				4F2EF8F91D5C611E004DB9CB /* FFHeaderScollerViewController.m in Sources */,
 				C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */,
 				4F9AD13C1D62D84D00E84FBB /* FFChainViewController.m in Sources */,
+				C34D3E091DD5B69D000AA196 /* FFChannelViewController.m in Sources */,
+				C34D3E011DD5AEBE000AA196 /* FFActionSheetManager.m in Sources */,
 				4FEB51491D4B1FF300C6CA03 /* FFRootView.m in Sources */,
 				469010211D4300FC00F22725 /* ViewController.m in Sources */,
 				4690101E1D4300FC00F22725 /* AppDelegate.m in Sources */,

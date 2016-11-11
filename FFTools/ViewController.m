@@ -25,21 +25,13 @@
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"menu控件" nameVC:@"FFMenuViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"header" nameVC:@"FFHeaderScollerViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"链式编程+函数式编程+RAC" nameVC:@"FFChainViewController"]];
-    
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"RunLoop" nameVC:@"FFRunLoopViewController"]];
-    
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"button随意切换" nameVC:@"FFButtonDemo"]];
-    
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"手动代码布局" nameVC:@"FFAutolayoutViewController"]];
-    
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"toast" nameVC:@"FFToastViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"图片选择器" nameVC:@"FFChoosePicViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"自定义标签" nameVC:@"FFChannelViewController"]];
 
-    
-    
-    
-
-
-    
     //注册 是用在 cell里面的，傻了吧
     //  [self.tableViewList registerClass:[ViewController class] forCellReuseIdentifier:@"list"];
 }
