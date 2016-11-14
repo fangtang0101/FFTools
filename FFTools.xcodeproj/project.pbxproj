@@ -72,6 +72,14 @@
 		C34D3E0A1DD5B69D000AA196 /* FFChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */; };
 		C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */; };
 		C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */; };
+		C3C1BA4E1DD997A300E9A027 /* FFMultipleActionSheetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */; };
+		C3C1BA511DD9981000E9A027 /* FFImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */; };
+		C3C1BA541DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */; };
+		C3C1BA571DD99AF000E9A027 /* FFPhotoAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */; };
+		C3C1BA5A1DD99C2F00E9A027 /* FFPhotoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */; };
+		C3C1BA5D1DD99DFB00E9A027 /* FFPhotoImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */; };
+		C3D52A981DD9AD84002B05B5 /* FFScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D52A961DD9AD84002B05B5 /* FFScrollViewViewController.m */; };
+		C3D52A991DD9AD84002B05B5 /* FFScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D52A971DD9AD84002B05B5 /* FFScrollViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +205,21 @@
 		C3AF2F311D87AC1100341C5D /* FFAutolayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAutolayoutViewController.h; sourceTree = "<group>"; };
 		C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAutolayoutViewController.m; sourceTree = "<group>"; };
 		C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFAutolayoutViewController.xib; sourceTree = "<group>"; };
+		C3C1BA4C1DD997A300E9A027 /* FFMultipleActionSheetManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMultipleActionSheetManger.h; sourceTree = "<group>"; };
+		C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMultipleActionSheetManger.m; sourceTree = "<group>"; };
+		C3C1BA4F1DD9981000E9A027 /* FFImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFImagePickerViewController.h; sourceTree = "<group>"; };
+		C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFImagePickerViewController.m; sourceTree = "<group>"; };
+		C3C1BA521DD99A6200E9A027 /* FFPhotoPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoPickerBaseViewController.h; sourceTree = "<group>"; };
+		C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoPickerBaseViewController.m; sourceTree = "<group>"; };
+		C3C1BA551DD99AF000E9A027 /* FFPhotoAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoAlbumListViewController.h; sourceTree = "<group>"; };
+		C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoAlbumListViewController.m; sourceTree = "<group>"; };
+		C3C1BA581DD99C2F00E9A027 /* FFPhotoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoAlbumModel.h; sourceTree = "<group>"; };
+		C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoAlbumModel.m; sourceTree = "<group>"; };
+		C3C1BA5B1DD99DFB00E9A027 /* FFPhotoImageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoImageListViewController.h; sourceTree = "<group>"; };
+		C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoImageListViewController.m; sourceTree = "<group>"; };
+		C3D52A951DD9AD84002B05B5 /* FFScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFScrollViewViewController.h; sourceTree = "<group>"; };
+		C3D52A961DD9AD84002B05B5 /* FFScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFScrollViewViewController.m; sourceTree = "<group>"; };
+		C3D52A971DD9AD84002B05B5 /* FFScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFScrollViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +408,9 @@
 				4F2EF8F61D5C611E004DB9CB /* FFHeaderScollerViewController.h */,
 				4F2EF8F71D5C611E004DB9CB /* FFHeaderScollerViewController.m */,
 				4F2EF8F81D5C611E004DB9CB /* FFHeaderScollerViewController.xib */,
+				C3D52A951DD9AD84002B05B5 /* FFScrollViewViewController.h */,
+				C3D52A961DD9AD84002B05B5 /* FFScrollViewViewController.m */,
+				C3D52A971DD9AD84002B05B5 /* FFScrollViewViewController.xib */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -477,6 +503,18 @@
 				C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */,
 				C34D3DFF1DD5AEBE000AA196 /* FFActionSheetManager.h */,
 				C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */,
+				C3C1BA4C1DD997A300E9A027 /* FFMultipleActionSheetManger.h */,
+				C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */,
+				C3C1BA4F1DD9981000E9A027 /* FFImagePickerViewController.h */,
+				C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */,
+				C3C1BA521DD99A6200E9A027 /* FFPhotoPickerBaseViewController.h */,
+				C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */,
+				C3C1BA551DD99AF000E9A027 /* FFPhotoAlbumListViewController.h */,
+				C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */,
+				C3C1BA581DD99C2F00E9A027 /* FFPhotoAlbumModel.h */,
+				C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */,
+				C3C1BA5B1DD99DFB00E9A027 /* FFPhotoImageListViewController.h */,
+				C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */,
 			);
 			name = PicView;
 			path = picView;
@@ -633,6 +671,7 @@
 				C34D3DFE1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png in Resources */,
 				4FC46A831D4B2820009B38DC /* search_icon@2x.png in Resources */,
 				463DA5BA1D75D5E500F035A2 /* FFChannalVedioView.xib in Resources */,
+				C3D52A991DD9AD84002B05B5 /* FFScrollViewViewController.xib in Resources */,
 				4F6574B61D5C6701007386AC /* 1.jpg in Resources */,
 				4FC46A7F1D4B2820009B38DC /* home_icon@2x.png in Resources */,
 				4FEB514E1D4B203D00C6CA03 /* FFJElasticPullToRefreshViewController.xib in Resources */,
@@ -662,13 +701,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C1BA511DD9981000E9A027 /* FFImagePickerViewController.m in Sources */,
 				4F1F8FFD1D5C1A09009C6C78 /* FFPerson+Internal.m in Sources */,
+				C3C1BA571DD99AF000E9A027 /* FFPhotoAlbumListViewController.m in Sources */,
 				C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */,
 				4F1F8FFC1D5C1A09009C6C78 /* FFPerson.m in Sources */,
+				C3C1BA5A1DD99C2F00E9A027 /* FFPhotoAlbumModel.m in Sources */,
 				4FEB51481D4B1FF300C6CA03 /* FFRealTimeChangeView.m in Sources */,
 				C34D3DE71DD5938B000AA196 /* FFToastViewController.m in Sources */,
 				C34D3DF91DD5AB07000AA196 /* FFChoosePicViewController.m in Sources */,
 				4690104E1D43016100F22725 /* FFRootViewController.m in Sources */,
+				C3C1BA4E1DD997A300E9A027 /* FFMultipleActionSheetManger.m in Sources */,
 				C34D3E051DD5B3ED000AA196 /* FFChannelView.m in Sources */,
 				4FEB515B1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingView.m in Sources */,
 				463DA5B81D75D5D000F035A2 /* FFChannalVedioView.m in Sources */,
@@ -680,13 +723,16 @@
 				4F9AD13C1D62D84D00E84FBB /* FFChainViewController.m in Sources */,
 				C34D3E091DD5B69D000AA196 /* FFChannelViewController.m in Sources */,
 				C34D3E011DD5AEBE000AA196 /* FFActionSheetManager.m in Sources */,
+				C3C1BA541DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m in Sources */,
 				4FEB51491D4B1FF300C6CA03 /* FFRootView.m in Sources */,
 				469010211D4300FC00F22725 /* ViewController.m in Sources */,
 				4690101E1D4300FC00F22725 /* AppDelegate.m in Sources */,
 				C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */,
 				4FEB515C1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
+				C3D52A981DD9AD84002B05B5 /* FFScrollViewViewController.m in Sources */,
 				4F1F8FFB1D5C1A09009C6C78 /* FFOther.m in Sources */,
 				4FEB514D1D4B203D00C6CA03 /* FFJElasticPullToRefreshViewController.m in Sources */,
+				C3C1BA5D1DD99DFB00E9A027 /* FFPhotoImageListViewController.m in Sources */,
 				466408441D64A96E00AF028A /* FFRunLoopViewController.m in Sources */,
 				4FEB515F1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m in Sources */,
 				4F9AD1401D62E04600E84FBB /* CaculatorMaker.m in Sources */,

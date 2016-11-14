@@ -8,9 +8,7 @@
 
 #import "FFAutolayoutViewController.h"
 
-
 @interface FFAutolayoutViewController ()
-
 @end
 
 @implementation FFAutolayoutViewController
@@ -18,8 +16,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"FFAutolayoutViewController";
-    
-    self.navigationController.navigationBar.hidden = YES;
     
     UIView* logoImageView = [UIView new];
     logoImageView.backgroundColor = [UIColor redColor];
@@ -52,9 +48,7 @@
     topConstraint.active = YES;
     heightConstraint.active = YES;
     
-    
 //    [self.view addConstraints:@[leftConstraint,rightConstraint,topConstraint,heightConstraint]];
-    
     
 }
 

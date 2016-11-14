@@ -23,6 +23,7 @@
 #define SCREENSIZE [UIScreen mainScreen].bounds.size
 
 @interface FFChannelView()
+@property (nonatomic,strong) NSMutableArray *arrayChannel;
 @property (nonatomic,strong) NSMutableArray *arrayButtons;
 @property (nonatomic,assign) CGFloat heightCell;
 @end
@@ -122,49 +123,54 @@
                        (viewLayer.transform, 0.08, 0.0, 0.0, 0.03)];
     [viewLayer addAnimation:animation forKey:@"wiggle"];
     
+    //    CATransition *animation = [CATransition animation];
+    //    [animation setDuration:0.7f]; //动画持续的时间
+    //    /*动画速度,何时快、慢
+    //     (
+    //     kCAMediaTimingFunctionLinear 线性（匀速）|
+    //     kCAMediaTimingFunctionEaseIn 先慢|
+    //     kCAMediaTimingFunctionEaseOut 后慢|
+    //     kCAMediaTimingFunctionEaseInEaseOut 先慢 后慢 中间快|
+    //     kCAMediaTimingFunctionDefault 默认|
+    //     )
+    //     */
+    //    [animation setTimingFunction:[CAMediaTimingFunction
+    //                                  functionWithName:kCAMediaTimingFunctionEaseIn]];
+    //
+    //    /*动画效果
+    //     (
+    //     kCATransitionFade淡出|
+    //     kCATransitionMoveIn覆盖原图|
+    //     kCATransitionPush推出|
+    //     kCATransitionReveal底部显出来
+    //     )
+    //     */
+    //    [animation setType:kCATransitionReveal];
+    //    /*动画方向
+    //     (
+    //     kCATransitionFromRight|
+    //     kCATransitionFromLeft|
+    //     kCATransitionFromTop|
+    //     kCATransitionFromBottom
+    //     )
+    //     */
+    //    [animation setSubtype: kCATransitionFromBottom];
+    //    [btn.layer addAnimation:animation forKey:@"Reveal"];
+    ////    还有一种设置动画类型的方法，不用setSubtype，只用setType
+    //    [animation setType:@"oglFlip"];
     
-//    CATransition *animation = [CATransition animation];
-//    [animation setDuration:0.7f]; //动画持续的时间
-//    /*动画速度,何时快、慢
-//     (
-//     kCAMediaTimingFunctionLinear 线性（匀速）|
-//     kCAMediaTimingFunctionEaseIn 先慢|
-//     kCAMediaTimingFunctionEaseOut 后慢|
-//     kCAMediaTimingFunctionEaseInEaseOut 先慢 后慢 中间快|
-//     kCAMediaTimingFunctionDefault 默认|
-//     )
-//     */
-//    [animation setTimingFunction:[CAMediaTimingFunction
-//                                  functionWithName:kCAMediaTimingFunctionEaseIn]];
-//    
-//    /*动画效果
-//     (
-//     kCATransitionFade淡出|
-//     kCATransitionMoveIn覆盖原图|
-//     kCATransitionPush推出|
-//     kCATransitionReveal底部显出来
-//     )
-//     */
-//    [animation setType:kCATransitionReveal];
-//    /*动画方向
-//     (
-//     kCATransitionFromRight|
-//     kCATransitionFromLeft|
-//     kCATransitionFromTop|
-//     kCATransitionFromBottom
-//     )
-//     */
-//    [animation setSubtype: kCATransitionFromBottom];
-//    [btn.layer addAnimation:animation forKey:@"Reveal"];
-////    还有一种设置动画类型的方法，不用setSubtype，只用setType
-//    [animation setType:@"oglFlip"];
-   
-    
-
     btn.selected = !btn.selected;
     [self setButtonStyleButtont:btn];
+    if (btn.isSelected) {
+        if ([self.delegate respondsToSelector:@selector(channelView:didSelectChannelModel:)]) {
+            [self.delegate channelView:self didSelectChannelModel:self.arrayChannel[btn.tag]];
+        }
+    }else{
+        if ([self.delegate respondsToSelector:@selector(channelView:didDeleteChannelModel:)]) {
+            [self.delegate channelView:self didDeleteChannelModel:self.arrayChannel[btn.tag]];
+        }
+    }
 }
-
 
 
 - (void)setButtonStyleButtont:(UIButton *)btn {
@@ -195,9 +201,8 @@
     }
     return result;
 }
-
 -(NSMutableArray *)arrayButtons {
-    
+
     if (!_arrayButtons) {
         _arrayButtons = [NSMutableArray array];
     }

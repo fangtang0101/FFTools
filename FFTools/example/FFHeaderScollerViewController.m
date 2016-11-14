@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationController.navigationBar.hidden = YES;
+ 
     
     
     
@@ -43,14 +43,19 @@
 //    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];
 //    
 //    self.tableViewList.separatorEffect = vibrancyEffect;
-    
-    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+
 
 #pragma mark delegate 协议方法
 #pragma mark -- tableViewDelegate

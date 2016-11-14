@@ -9,22 +9,23 @@
 #import "FFRootView.h"
 
 @interface FFChannelModel : NSObject
-// 名称
 @property (nonatomic, copy) NSString* name;
-// id
 @property (nonatomic, assign) NSInteger idValue;
 @property (nonatomic, assign) BOOL isSelected;
-
 @end
 
+@class FFChannelView;
+@protocol FFChannelViewDelegate <NSObject>
+//选中的 频道
+- (void)channelView:(FFChannelView *)channelView didSelectChannelModel:(FFChannelModel*)channelModel;
+//取消 频道
+- (void)channelView:(FFChannelView *)channelView didDeleteChannelModel:(FFChannelModel*)channelModel;
+@end
 
 @interface FFChannelView : FFRootView
-@property (nonatomic,strong)NSMutableArray *arrayChannel;
-
+@property (nonatomic,strong) id<FFChannelViewDelegate> delegate;
 -(void)setDataSourceWithArray:(NSMutableArray *)arraySouce;
-
 - (NSArray *)getAllHasSelectedChannal;
-
 @end
 
 @interface UIView(FF)

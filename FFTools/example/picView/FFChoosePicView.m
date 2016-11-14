@@ -7,6 +7,7 @@
 //
 
 #import "FFChoosePicView.h"
+#import "FFMultipleActionSheetManger.h"
 
 @interface FFChoosePicView()
 
@@ -19,6 +20,9 @@
 @property (nonatomic,assign) CGFloat spaceWidthInside ;
 @property (nonatomic,assign) CGFloat widthPicViewContainer;
 
+@property (nonatomic,strong) UIViewController *holdVC;
+@property (nonatomic,strong) FFMultipleActionSheetManger *actionManager;
+
 @end
 
 @implementation FFChoosePicView
@@ -28,15 +32,16 @@
 #define viewRight (self.widthPicViewContainer)
 #define pictuerHeight 90
 
-+(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange
-{
-//    FFChoosePicView *VC = [[[NSBundle mainBundle] loadNibNamed:@"FFChoosePicView" owner:nil options:nil] lastObject];
+#define MaxCountPic 3
+
++(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange HoldVC:(UIViewController*)holdVC{
     FFChoosePicView *VC = [[FFChoosePicView alloc]initWithFrame:CGRectMake(0, 100, SCREENSIZE.width, 120)];
     VC.isNeedChange = isNeedChange;
     VC.spaceWidthOutside = 15;
     VC.spaceWidthInside = 5;
     VC.widthPicViewContainer = SCREENSIZE.width - 30 ;
     VC.maxCountPic = 6;
+    VC.holdVC = holdVC;
     return VC;
 }
 
@@ -51,8 +56,6 @@
     }
     if (self.widthPicViewContainer) {
         self.widthPicViewContainer = widthPicViewContainer;
-        
-        
     }
 }
 
@@ -155,21 +158,25 @@
 }
 //增加一张图片
 -(void)onClickAddPic:(UIButton* )btn {
+    
 //    [self.delegate uploadPicviewAddPic];
     
-//    self.actionManager = [[LYHMultipleActionSheetManager alloc]init];
+    self.actionManager = [[FFMultipleActionSheetManger alloc]init];
 //    NSUInteger count = MaxCountPic - self.arraypics.count;
 //    [LYHClientConfiguration sharedConfiguration].maxSelectNumberPhoto = count > 0 ? count : 0;
-//    __weak __typeof(self)weakSelf = self;
-//    self.actionManager.actionManagerBlock = ^(UIImage *image) {
+    __weak __typeof(self)weakSelf = self;
+    self.actionManager.actionManagerBlock = ^(UIImage *image) {
+        
+        NSLog(@"===");
+        
 //        LYHImageView *imageView = [[LYHImageView alloc]init];
 //        imageView.image = image;
 //        [imageView fillImageUrlString:nil];
 //        [weakSelf.arraypics addObject:imageView];
 //        [weakSelf fillCellPicWithArrayPics:weakSelf.arraypics];
 //        [weakSelf.tableViewContents reloadData];
-//    };
-//    [self.actionManager openCameraAndPhotoLibrarySheetWithViewController:self];
+    };
+    [self.actionManager openCameraAndPhotoLibrarySheetWithViewController:self.holdVC];
     
 }
 

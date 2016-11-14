@@ -31,9 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"RunLoop试验";
-    //解决 UITextField 的上部留白bug ios7
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"RunLoopDemo";
 }
 //页面捕捉点击事件
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

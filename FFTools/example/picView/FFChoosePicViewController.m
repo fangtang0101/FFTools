@@ -9,14 +9,12 @@
 #import "FFChoosePicView.h"
 #import "FFChoosePicViewController.h"
 
-@interface FFChoosePicViewController ()
+@interface FFChoosePicViewController ()<FFChoosePicViewDelegate>
 @property (nonatomic,strong) NSMutableArray *arrayPics;
 @property (nonatomic,strong) FFChoosePicView *viewPic;
-
 @end
 
 @implementation FFChoosePicViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +27,7 @@
         self.viewPic = nil;
     }
     
-    self.viewPic = [FFChoosePicView creatUploadPicViewIsNeedChange:YES];
+    self.viewPic = [FFChoosePicView creatUploadPicViewIsNeedChange:YES HoldVC:self];
     self.viewPic.maxCountPic = 3;
     self.viewPic.backgroundColor = [UIColor clearColor];
     self.viewPic.delegate = self;

@@ -25,7 +25,7 @@
 
 @property (nonatomic,weak)id<FFChoosePicViewDelegate>delegate;
 
-+(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange;
++(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange HoldVC:(UIViewController*)holdVC;
 
 - (void)reSortPositionWithArrayPic:(NSMutableArray *)arrayPic;
 
