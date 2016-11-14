@@ -90,32 +90,77 @@
     [result setTitle:title forState:UIControlStateNormal];
     result.tag = channelId;
     result.selected = isSelected;
-    //综合不可以取消关注
-    if (channelId == 1) {
-        result.selected = YES;
-    }
+
     UIColor * colorBoarderbtn = colorBoarder;
     result.layer.borderColor = colorBoarderbtn.CGColor;
     result.layer.borderWidth = 1;
     result.titleLabel.font = [UIFont systemFontOfSize:13];
     [result addTarget:self action:@selector(chooseChannel:) forControlEvents:UIControlEventTouchUpInside];
     [self setButtonStyleButtont:result];
-    //V2.01 新的样式
     result.left = 0;
     result.top = 0;
     //字体自适应宽度高度(外框将button里面的文字紧紧包围)
     [result sizeToFit];
     result.width+=30;
     result.height = 30;
-    //  result.titleLabel.adjustsFontSizeToFitWidth = YES;
     return result;
 }
 
 - (void)chooseChannel:(UIButton *)btn {
+    
+    //抖动效果
+    CALayer*viewLayer=[btn layer];
+    CABasicAnimation*animation=[CABasicAnimation animationWithKeyPath:@"transform"];
+    animation.duration=0.2;
+    animation.repeatCount = 2;
+    animation.autoreverses=YES;
+    animation.fromValue=[NSValue valueWithCATransform3D:CATransform3DRotate
+                         
+                         (viewLayer.transform, -0.08, 0.0, 0.0, 0.03)];
+    animation.toValue=[NSValue valueWithCATransform3D:CATransform3DRotate
+                       
+                       (viewLayer.transform, 0.08, 0.0, 0.0, 0.03)];
+    [viewLayer addAnimation:animation forKey:@"wiggle"];
+    
+    
+//    CATransition *animation = [CATransition animation];
+//    [animation setDuration:0.7f]; //动画持续的时间
+//    /*动画速度,何时快、慢
+//     (
+//     kCAMediaTimingFunctionLinear 线性（匀速）|
+//     kCAMediaTimingFunctionEaseIn 先慢|
+//     kCAMediaTimingFunctionEaseOut 后慢|
+//     kCAMediaTimingFunctionEaseInEaseOut 先慢 后慢 中间快|
+//     kCAMediaTimingFunctionDefault 默认|
+//     )
+//     */
+//    [animation setTimingFunction:[CAMediaTimingFunction
+//                                  functionWithName:kCAMediaTimingFunctionEaseIn]];
+//    
+//    /*动画效果
+//     (
+//     kCATransitionFade淡出|
+//     kCATransitionMoveIn覆盖原图|
+//     kCATransitionPush推出|
+//     kCATransitionReveal底部显出来
+//     )
+//     */
+//    [animation setType:kCATransitionReveal];
+//    /*动画方向
+//     (
+//     kCATransitionFromRight|
+//     kCATransitionFromLeft|
+//     kCATransitionFromTop|
+//     kCATransitionFromBottom
+//     )
+//     */
+//    [animation setSubtype: kCATransitionFromBottom];
+//    [btn.layer addAnimation:animation forKey:@"Reveal"];
+////    还有一种设置动画类型的方法，不用setSubtype，只用setType
+//    [animation setType:@"oglFlip"];
+   
+    
 
-    if (btn.tag == 1) {
-        return;
-    }
     btn.selected = !btn.selected;
     [self setButtonStyleButtont:btn];
 }
