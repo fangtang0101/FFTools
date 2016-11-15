@@ -1,47 +1,43 @@
 //
-//  FFChoosePicView.m
-//  FFTools
+//  LYHUploadPicView.m
+//  Liangyihui
 //
-//  Created by Administrator on 16/11/11.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 方春高 on 16/2/23.
+//  Copyright © 2016年 Liangyihui. All rights reserved.
 //
 
-#import "FFChoosePicView.h"
-#import "FFMultipleActionSheetManger.h"
+#import "LYHUploadPicView.h"
+#import "LYHImageView.h"
 
-@interface FFChoosePicView()
-
+@interface LYHUploadPicView()
 @property (nonatomic,strong)NSMutableArray *arrayPicViews;
 @property (nonatomic,assign) BOOL isFull;//图片是否满了
 @property (nonatomic,strong) NSMutableArray *arrayAllViews;
 @property (nonatomic,assign) BOOL isUpload;
 @property (nonatomic,assign) BOOL isNeedChange;
+
 @property (nonatomic,assign) CGFloat spaceWidthOutside ;
 @property (nonatomic,assign) CGFloat spaceWidthInside ;
 @property (nonatomic,assign) CGFloat widthPicViewContainer;
 
-@property (nonatomic,strong) UIViewController *holdVC;
-@property (nonatomic,strong) FFMultipleActionSheetManger *actionManager;
-
 @end
 
-@implementation FFChoosePicView
-
+@implementation LYHUploadPicView
+//#define maxViewCount 6
 #define spaceWidth 5
 #define spaceHeight 5
 #define viewRight (self.widthPicViewContainer)
 #define pictuerHeight 90
 
-#define MaxCountPic 3
 
-+(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange HoldVC:(UIViewController*)holdVC{
-    FFChoosePicView *VC = [[FFChoosePicView alloc]initWithFrame:CGRectMake(0, 100, SCREENSIZE.width, 120)];
++(instancetype)creatUploadPicViewIsNeedChange:(BOOL)isNeedChange
+{
+    LYHUploadPicView *VC = [[[NSBundle mainBundle] loadNibNamed:@"LYHUploadPicView" owner:nil options:nil] lastObject];
     VC.isNeedChange = isNeedChange;
     VC.spaceWidthOutside = 15;
     VC.spaceWidthInside = 5;
     VC.widthPicViewContainer = SCREENSIZE.width - 30 ;
     VC.maxCountPic = 6;
-    VC.holdVC = holdVC;
     return VC;
 }
 
@@ -49,13 +45,15 @@
 - (void)setUpSpaceWidthOutside:(CGFloat)spaceWidthOutside spaceWidthInside:(CGFloat)spaceWidthInside  widthPicViewContainer:(CGFloat)widthPicViewContainer;
 {
     if (spaceWidthOutside >= 0) {
-        self.spaceWidthOutside = spaceWidthOutside;
+         self.spaceWidthOutside = spaceWidthOutside;
     }
     if (self.spaceWidthInside >= 0) {
-        self.spaceWidthInside = spaceWidthInside;
+            self.spaceWidthInside = spaceWidthInside;
     }
     if (self.widthPicViewContainer) {
         self.widthPicViewContainer = widthPicViewContainer;
+        
+        
     }
 }
 
@@ -64,7 +62,7 @@
     
     self.isFull =  arrayPic.count >= self.maxCountPic ? YES :NO;
     self.arrayPicViews = arrayPic;
-    
+
     CGFloat  viewW = ((self.widthPicViewContainer - self.spaceWidthOutside*2) -  2*self.spaceWidthInside)/3;
     if (self.isNeedChange) {
         if (arrayPic.count < self.maxCountPic ) { //如果不足6个，加上btn
@@ -142,15 +140,16 @@
 //删除图片
 -(void)onClickDeletePic:(UIButton* )btn {
     
-    NSString *urlDelete = nil;
-    NSNumber* pictureId = nil;
+  NSString *urlDelete = nil;
+  NSNumber* pictureId = nil;
     
-    NSObject *obj =  self.arrayPicViews[btn.tag];
-    if ([obj isKindOfClass:[UIImageView class]]) {
-        UIImageView *viewImage = (UIImageView*)obj;
+  NSObject *obj =  self.arrayPicViews[btn.tag];
+    
+    if ([obj isKindOfClass:[LYHImageView class]]) {
+        LYHImageView *viewImage = (LYHImageView*)obj;
         if (viewImage.imageURLString) {
             urlDelete = viewImage.imageURLString;
-//            pictureId = viewImage.pictureId;
+            pictureId = viewImage.pictureId;
         }
     }
     //删除图片
@@ -158,26 +157,7 @@
 }
 //增加一张图片
 -(void)onClickAddPic:(UIButton* )btn {
-    
-//    [self.delegate uploadPicviewAddPic];
-    
-    self.actionManager = [[FFMultipleActionSheetManger alloc]init];
-//    NSUInteger count = MaxCountPic - self.arraypics.count;
-//    [LYHClientConfiguration sharedConfiguration].maxSelectNumberPhoto = count > 0 ? count : 0;
-    __weak __typeof(self)weakSelf = self;
-    self.actionManager.actionManagerBlock = ^(UIImage *image) {
-        
-        NSLog(@"===");
-        
-//        LYHImageView *imageView = [[LYHImageView alloc]init];
-//        imageView.image = image;
-//        [imageView fillImageUrlString:nil];
-//        [weakSelf.arraypics addObject:imageView];
-//        [weakSelf fillCellPicWithArrayPics:weakSelf.arraypics];
-//        [weakSelf.tableViewContents reloadData];
-    };
-    [self.actionManager openCameraAndPhotoLibrarySheetWithViewController:self.holdVC];
-    
+    [self.delegate uploadPicviewAddPic];
 }
 
 -(void)layoutSubviews {
@@ -198,136 +178,6 @@
     return _arrayAllViews;
 }
 
-@end
 
-//***************************************************** 扩展 **********************************
-
-@implementation UIView(FF)
-- (CGFloat)left {
-    return self.frame.origin.x;
-}
-
-- (void)setLeft:(CGFloat)x {
-    CGRect frame = self.frame;
-    frame.origin.x = x;
-    self.frame = frame;
-}
-
-- (CGFloat)top {
-    return self.frame.origin.y;
-}
-
-- (void)setTop:(CGFloat)y {
-    CGRect frame = self.frame;
-    frame.origin.y = y;
-    self.frame = frame;
-}
-
-- (CGFloat)right {
-    return self.frame.origin.x + self.frame.size.width;
-}
-
-- (void)setRight:(CGFloat)right {
-    CGRect frame = self.frame;
-    frame.origin.x = right - frame.size.width;
-    self.frame = frame;
-}
-
-- (CGFloat)bottom {
-    return self.frame.origin.y + self.frame.size.height;
-}
-
-- (void)setBottom:(CGFloat)bottom {
-    CGRect frame = self.frame;
-    frame.origin.y = bottom - frame.size.height;
-    self.frame = frame;
-}
-
-- (CGFloat)width {
-    return self.frame.size.width;
-}
-
-- (void)setWidth:(CGFloat)width {
-    CGRect frame = self.frame;
-    frame.size.width = width;
-    self.frame = frame;
-}
-
-- (CGFloat)height {
-    return self.frame.size.height;
-}
-
-- (void)setHeight:(CGFloat)height {
-    CGRect frame = self.frame;
-    frame.size.height = height;
-    self.frame = frame;
-}
-
-- (CGFloat)centerX {
-    return self.center.x;
-}
-
-- (void)setCenterX:(CGFloat)centerX {
-    self.center = CGPointMake(centerX, self.center.y);
-}
-
-- (CGFloat)centerY {
-    return self.center.y;
-}
-
-- (void)setCenterY:(CGFloat)centerY {
-    self.center = CGPointMake(self.center.x, centerY);
-}
-
-- (CGPoint)origin {
-    return self.frame.origin;
-}
-
-- (void)setOrigin:(CGPoint)origin {
-    CGRect frame = self.frame;
-    frame.origin = origin;
-    self.frame = frame;
-}
-
-- (CGSize)size {
-    return self.frame.size;
-}
-
-- (void)setSize:(CGSize)size {
-    CGRect frame = self.frame;
-    frame.size = size;
-    self.frame = frame;
-}
-
-- (void)drawBoarderWithColor:(UIColor*)color cornerRadius:(CGFloat)cornerRadius borderWidt:(CGFloat)borderWidth{
-    if (cornerRadius > 0) {
-        self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = cornerRadius;
-    }
-    if (color) {
-        self.layer.borderColor = color.CGColor;
-    }
-    if (borderWidth >0) {
-        self.layer.borderWidth=borderWidth;
-    }
-}
 
 @end
-
-@implementation UIImageView(FF)
-
-static NSString * FFImageURLString = @"FFImageURLString";
-
-- (NSString *)imageURLString {
-    return objc_getAssociatedObject(self, &FFImageURLString);
-}
-
-- (void)setImageURLString:(NSString *)imageURLString{
-    objc_setAssociatedObject(self, &FFImageURLString, FFImageURLString, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-@end
-
-
-
-

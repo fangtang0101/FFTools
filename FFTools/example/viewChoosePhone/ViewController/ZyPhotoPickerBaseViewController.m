@@ -1,24 +1,25 @@
 //
-//  FFPhotoPickerBaseViewController.m
-//  FFTools
+//  ZyPhotoPickerBaseViewController.m
+//  多选图片
 //
-//  Created by Administrator on 16/11/14.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 赵越 on 16/2/22.
+//  Copyright © 2016年 赵越. All rights reserved.
 //
 
-#import "FFPhotoPickerBaseViewController.h"
+#import "ZYPhotoPickerBaseViewController.h"
+#import "ZYImagePickerViewController.h"
 
-@interface FFPhotoPickerBaseViewController ()
+@interface ZYPhotoPickerBaseViewController ()
 
 @end
 
-@implementation FFPhotoPickerBaseViewController
+@implementation ZYPhotoPickerBaseViewController
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self didRotateFromInterfaceOrientation:self.interfaceOrientation];
-#warning TODO
     NSUInteger maxSelectNumber = 3;
+#warning TODO
     self.maxSelectNumber = maxSelectNumber > 0 ? maxSelectNumber : LONG_MAX;
 }
 
@@ -35,8 +36,8 @@
     [self.naviController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (FFImagePickerViewController *)naviController {
-    return (FFImagePickerViewController *)self.navigationController;
+- (ZYImagePickerViewController *)naviController {
+    return (ZYImagePickerViewController *)self.navigationController;
 }
 
 - (UIBarButtonItem *)rightCloseButton {

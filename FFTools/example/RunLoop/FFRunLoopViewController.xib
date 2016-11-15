@@ -25,15 +25,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct4-xE-XAy">
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="arF-Qu-3bv">
-                                    <color key="backgroundColor" red="0.96525804920000002" green="0.89808621619999995" blue="0.256507453" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.90980392160000001" green="0.91372549020000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="KH6-PG-Z1a"/>
                                         <constraint firstAttribute="height" constant="150" id="UH6-DW-Wj9"/>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Y18-Uc-jFY"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="xuC-0s-Avb"/>
                                     </constraints>
-                                    <string key="text">+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo
-此方法创建timer不会主动去只执行方法，需要我们手动创建runLoop去主动运行</string>
+                                    <string key="text">打开右侧switch开关，手动创建一个 runLoop ，此时runLoop 运行一个 timer ，使得下面的label里面的数字不断的加1，
+当你 滚动 此处textField 的内容的时候，runLoop 是不工作的，计数就 会暂停
+当你 停止滚动的时候，计数又重新开始</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -227,7 +228,7 @@
                 <constraint firstAttribute="trailing" secondItem="EAm-5Y-UYx" secondAttribute="trailing" id="tK2-cd-Aop"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="251" y="-120"/>
+            <point key="canvasLocation" x="-104" y="-106"/>
         </view>
     </objects>
 </document>

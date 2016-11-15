@@ -1,16 +1,19 @@
 //
-//  FFPhotoAlbumListViewController.m
-//  FFTools
+//  ZYPhotoAlbumListViewController.m
+//  多选图片
 //
-//  Created by Administrator on 16/11/14.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 赵越 on 16/2/22.
+//  Copyright © 2016年 赵越. All rights reserved.
 //
-#import "FFPhotoAlbumModel.h"
-#import "FFPhotoAlbumListViewController.h"
-#import "FFPhotoImageListViewController.h"
+#import "FFRootView.h"
+#import "ZYPhotoAlbumListViewController.h"
+#import "ZYPhotoImageListViewController.h"
+#import "ZYPhotoAlbumModel.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-//*********************************** cell ********************************
-@interface FFPhotoAlbumListCell: UITableViewCell//临时使用的Cell
+
+
+@interface ZYPhotoAlbumListCell: UITableViewCell//临时使用的Cell
 @property (nonatomic, strong) UIImageView *albumThumbImageView;
 @property (nonatomic, strong) UILabel *albumNameLabel;
 @property (nonatomic, copy) NSString *albumName;
@@ -22,7 +25,7 @@
 
 #define AlbumCellHeight 60
 
-@implementation FFPhotoAlbumListCell
+@implementation ZYPhotoAlbumListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -39,7 +42,7 @@
     [self refreshString];
 }
 
-- (NSMutableAttributedString *)attributeString {
+- (NSMutableAttributedString *)attributeString{
     if (!_attributeString){
         _attributeString = [[NSMutableAttributedString alloc]initWithString:@""];
     }
@@ -70,7 +73,7 @@
 
 - (UILabel *)albumNameLabel{
     if (!_albumNameLabel){
-        _albumNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.albumThumbImageView.frame)+5, 0, [UIScreen mainScreen].bounds.size.width-(CGRectGetMaxX(self.albumThumbImageView.frame)+5), AlbumCellHeight)];
+        _albumNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.albumThumbImageView.frame)+5, 0, ScreenWidth-(CGRectGetMaxX(self.albumThumbImageView.frame)+5), AlbumCellHeight)];
     }
     return _albumNameLabel;
 }
@@ -86,24 +89,19 @@
 
 @end
 
-//*********************************** cell ********************************
-
-@interface FFPhotoAlbumListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ZYPhotoAlbumListViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *albumListArray;
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
-@implementation FFPhotoAlbumListViewController
+@implementation ZYPhotoAlbumListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"照片";
     [self.view addSubview:self.tableView];
     [self.tableView setBackgroundColor:[UIColor clearColor]];
-    
-    UIView* footerView = [[UIView alloc] init];
-    footerView.backgroundColor = [UIColor clearColor];
-    self.tableView = footerView;
+//    [self.tableView removeTailRows];
     //获取相册列表
     [self loadAlbumList];
 }
@@ -112,13 +110,13 @@
     ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
     [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         if (group) {
-            FFPhotoAlbumModel *model = [[FFPhotoAlbumModel alloc]init];
+            ZYPhotoAlbumModel *model = [[ZYPhotoAlbumModel alloc]init];
             model.thumbImageData = UIImageJPEGRepresentation([UIImage imageWithCGImage:group.posterImage], .9);//将相册的封面图存进model
             model.albumName = [[group valueForProperty:ALAssetsGroupPropertyName] mutableCopy];//相册的名称
             model.albumCount = [group numberOfAssets];//相册内元素的数量
             [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                 if ([[result valueForProperty:ALAssetPropertyType]isEqualToString:ALAssetTypePhoto]){
-                    FFPhotoAlAssetModel *alasetModel = [[FFPhotoAlAssetModel alloc]init];
+                    ZYPhotoAlAssetModel *alasetModel = [[ZYPhotoAlAssetModel alloc]init];
                     /**
                      *  将相册内,相片的url放到相片元素的url中(后面获取相片内容需要用到)
                      *  在setPhotoURL方法中,通过url获取相片的asset对像,并将相片的封面放置到model中缓存起来
@@ -128,7 +126,7 @@
                 }
             }];
             if (self.albumListArray.count) {
-                FFPhotoAlbumModel *firstModel = self.albumListArray[0];
+                ZYPhotoAlbumModel *firstModel = self.albumListArray[0];
                 if (firstModel.albumCount<model.albumCount) { //排序,相册里相片数量越多,则越在前面
                     [self.albumListArray insertObject:model atIndex:0];
                 }
@@ -142,13 +140,13 @@
             [self.tableView reloadData];
         }
     } failureBlock:^(NSError *error) {
-        NSLog(@"failed");
+        NSLog(@"Group not found!\n");
     }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FFPhotoAlbumModel *model = self.albumListArray[indexPath.row];
-    FFPhotoImageListViewController *imageListController = [[FFPhotoImageListViewController alloc]init];
+    ZYPhotoAlbumModel *model = self.albumListArray[indexPath.row];
+    ZYPhotoImageListViewController *imageListController = [[ZYPhotoImageListViewController alloc]init];
     imageListController.model = model;
     [self.navigationController pushViewController:imageListController animated:YES];
 }
@@ -167,13 +165,13 @@
 
 static NSString *identifier = @"albumCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FFPhotoAlbumListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    ZYPhotoAlbumListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[FFPhotoAlbumListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[ZYPhotoAlbumListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     cell.separatorInset = UIEdgeInsetsMake(0, AlbumCellHeight, 0, 0);
-    FFPhotoAlbumModel *model = self.albumListArray[indexPath.row];
+    ZYPhotoAlbumModel *model = self.albumListArray[indexPath.row];
     // 设置相册封面图
     cell.albumThumbImageView.image = [UIImage imageWithData:model.thumbImageData];
     // 设置相册名称和数量
@@ -207,8 +205,5 @@ static NSString *identifier = @"albumCell";
         self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     }];
 }
-
-
-
 
 @end

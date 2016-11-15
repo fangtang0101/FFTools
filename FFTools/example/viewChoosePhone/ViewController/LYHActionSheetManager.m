@@ -1,18 +1,27 @@
 //
-//  FFActionSheetManager.m
-//  FFTools
+//  LYHActionSheetManager.m
+//  Liangyihui
 //
-//  Created by Administrator on 16/11/11.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 赵越 on 16/2/23.
+//  Copyright © 2016年 Liangyihui. All rights reserved.
 //
 
-#import "FFActionSheetManager.h"
+#import "LYHActionSheetManager.h"
+//#import "LYHRootViewController.h"
 
-@interface FFActionSheetManager()<UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface LYHActionSheetManager ()<UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+//@property (nonatomic, strong) LYHRootViewController *actionShowViewController;
 @property (nonatomic, strong) UIView *actionShowView;
 @end
 
-@implementation FFActionSheetManager
+@implementation LYHActionSheetManager
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.uploadImageType = LYHUploadImageTypeHeadImage;
+    }
+    return self;
+}
 
 - (void)openCameraAndPhotoLibrarySheetWithViewController:(UIViewController *)viewController {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"相机",  @"相册", nil];
@@ -39,7 +48,7 @@
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        //        picker.allowsEditing = YES;//设置拍照后的图片可被编辑
+//        picker.allowsEditing = YES;//设置拍照后的图片可被编辑
         picker.sourceType = sourceType;
         [self->actionShowViewController presentViewController:picker animated:YES completion:nil];
     }else {
@@ -74,7 +83,5 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 @end

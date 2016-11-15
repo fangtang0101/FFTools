@@ -1,15 +1,14 @@
 //
-//  FFPhotoAlbumModel.m
-//  FFTools
+//  ZYPhotoAlbumModel.m
+//  多选图片
 //
-//  Created by Administrator on 16/11/14.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 赵越 on 16/2/22.
+//  Copyright © 2016年 赵越. All rights reserved.
 //
 
-#import "FFPhotoAlbumModel.h"
+#import "ZYPhotoAlbumModel.h"
 
-@implementation FFPhotoAlbumModel
-
+@implementation ZYPhotoAlbumModel
 - (NSMutableArray *)photoArray{
     if (!_photoArray){
         _photoArray = [[NSMutableArray alloc]init];
@@ -19,8 +18,7 @@
 
 @end
 
-
-@implementation FFPhotoAlAssetModel
+@implementation ZYPhotoAlAssetModel
 
 - (void)setPhotoURL:(NSURL *)photoURL{
     _photoURL = [photoURL copy];
@@ -29,6 +27,7 @@
     [libiary assetForURL:photoURL resultBlock:^(ALAsset *asset) {
         self.thumbsImage = [UIImage imageWithCGImage:asset.aspectRatioThumbnail];
     } failureBlock:^(NSError *error) {
+        
     }];
 }
 

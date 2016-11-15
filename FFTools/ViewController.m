@@ -29,13 +29,9 @@
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"button随意切换" nameVC:@"FFButtonDemo"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"手动代码布局" nameVC:@"FFAutolayoutViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"toast" nameVC:@"FFToastViewController"]];
-    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"图片选择器" nameVC:@"FFChoosePicViewController"]];
+    [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"图片选择器" nameVC:@"FFPicChooseViewController"]];
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"自定义标签" nameVC:@"FFChannelViewController"]];
-    
     [self.arrayList addObject:[FFModelVC ModelVCWithtitle:@"scrollViewDemo" nameVC:@"FFScrollViewViewController"]];
-
-    
-    
 
     //注册 是用在 cell里面的，傻了吧
     //  [self.tableViewList registerClass:[ViewController class] forCellReuseIdentifier:@"list"];

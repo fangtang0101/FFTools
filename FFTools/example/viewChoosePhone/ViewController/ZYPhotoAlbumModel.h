@@ -1,19 +1,17 @@
 //
-//  FFPhotoAlbumModel.h
-//  FFTools
+//  ZYPhotoAlbumModel.h
+//  多选图片
 //
-//  Created by Administrator on 16/11/14.
-//  Copyright © 2016年 春高方. All rights reserved.
+//  Created by 赵越 on 16/2/22.
+//  Copyright © 2016年 赵越. All rights reserved.
 //
+
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@class FFPhotoAlAssetModel;
+@class ZYPhotoAlAssetModel;
 
-
-@interface FFPhotoAlbumModel : NSObject
-
+@interface ZYPhotoAlbumModel: NSObject
 @property (nonatomic, copy) NSData *thumbImageData;
 @property (nonatomic, copy) NSString *albumName;
 @property (nonatomic, assign) NSInteger albumCount;
@@ -21,7 +19,7 @@
 
 @end
 
-@interface FFPhotoAlAssetModel: NSObject
+@interface ZYPhotoAlAssetModel: NSObject
 @property (nonatomic, copy) NSURL *photoURL;
 @property (nonatomic, assign, getter=isSelected) BOOL selected;
 @property (nonatomic, strong) UIImage *thumbsImage;

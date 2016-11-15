@@ -61,23 +61,32 @@
 		C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEB1DD59484000AA196 /* FFRootWidget.m */; };
 		C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DEE1DD59613000AA196 /* FFToastWidget.m */; };
 		C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DF01DD59630000AA196 /* FFToastWidget.xib */; };
-		C34D3DF51DD5A21C000AA196 /* FFChoosePicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */; };
-		C34D3DF91DD5AB07000AA196 /* FFChoosePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */; };
-		C34D3DFA1DD5AB07000AA196 /* FFChoosePicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */; };
-		C34D3DFD1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */; };
-		C34D3DFE1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */; };
-		C34D3E011DD5AEBE000AA196 /* FFActionSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */; };
 		C34D3E051DD5B3ED000AA196 /* FFChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E041DD5B3ED000AA196 /* FFChannelView.m */; };
 		C34D3E091DD5B69D000AA196 /* FFChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34D3E071DD5B69D000AA196 /* FFChannelViewController.m */; };
 		C34D3E0A1DD5B69D000AA196 /* FFChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */; };
+		C36245DC1DDAADE9005CB12F /* LYHUploadPicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245DA1DDAADE9005CB12F /* LYHUploadPicView.m */; };
+		C36245DD1DDAADE9005CB12F /* LYHUploadPicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36245DB1DDAADE9005CB12F /* LYHUploadPicView.xib */; };
+		C36245E21DDAAEA2005CB12F /* FFPicChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245E01DDAAEA2005CB12F /* FFPicChooseViewController.m */; };
+		C36245E31DDAAEA2005CB12F /* FFPicChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36245E11DDAAEA2005CB12F /* FFPicChooseViewController.xib */; };
+		C36245E61DDAB1A4005CB12F /* LYHRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245E51DDAB1A4005CB12F /* LYHRootView.m */; };
+		C36245E91DDAB21A005CB12F /* LYHImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245E81DDAB21A005CB12F /* LYHImageView.m */; };
+		C36245EC1DDAB517005CB12F /* LYHMultipleActionSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245EB1DDAB517005CB12F /* LYHMultipleActionSheetManager.m */; };
+		C36245EF1DDAB561005CB12F /* LYHActionSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245EE1DDAB561005CB12F /* LYHActionSheetManager.m */; };
+		C36245F21DDAB584005CB12F /* LYHUploadImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245F11DDAB584005CB12F /* LYHUploadImageManager.m */; };
+		C36245F51DDAB60F005CB12F /* ZYImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245F41DDAB60F005CB12F /* ZYImagePickerViewController.m */; };
+		C36245F81DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245F71DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.m */; };
+		C36245FB1DDAB743005CB12F /* ZyPhotoPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245FA1DDAB743005CB12F /* ZyPhotoPickerBaseViewController.m */; };
+		C36245FE1DDAB78C005CB12F /* ZYPhotoImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36245FD1DDAB78C005CB12F /* ZYPhotoImageListViewController.m */; };
+		C36246011DDAB7AF005CB12F /* ZYPhotoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C36246001DDAB7AF005CB12F /* ZYPhotoAlbumModel.m */; };
+		C36246041DDAB854005CB12F /* ZYPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36246031DDAB854005CB12F /* ZYPhotoPreviewController.m */; };
+		C36246071DDABE45005CB12F /* hzgl_zljl_tjtp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C36246051DDABE45005CB12F /* hzgl_zljl_tjtp@2x.png */; };
+		C36246081DDABE45005CB12F /* hzgl_zljl_tjtp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C36246061DDABE45005CB12F /* hzgl_zljl_tjtp@3x.png */; };
+		C362460D1DDABEEE005CB12F /* pic_select_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C36246091DDABEEE005CB12F /* pic_select_click@2x.png */; };
+		C362460E1DDABEEE005CB12F /* pic_select_click@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C362460A1DDABEEE005CB12F /* pic_select_click@3x.png */; };
+		C362460F1DDABEEE005CB12F /* pic_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C362460B1DDABEEE005CB12F /* pic_select@2x.png */; };
+		C36246101DDABEEE005CB12F /* pic_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C362460C1DDABEEE005CB12F /* pic_select@3x.png */; };
 		C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */; };
 		C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */; };
-		C3C1BA4E1DD997A300E9A027 /* FFMultipleActionSheetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */; };
-		C3C1BA511DD9981000E9A027 /* FFImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */; };
-		C3C1BA541DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */; };
-		C3C1BA571DD99AF000E9A027 /* FFPhotoAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */; };
-		C3C1BA5A1DD99C2F00E9A027 /* FFPhotoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */; };
-		C3C1BA5D1DD99DFB00E9A027 /* FFPhotoImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */; };
 		C3D52A981DD9AD84002B05B5 /* FFScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D52A961DD9AD84002B05B5 /* FFScrollViewViewController.m */; };
 		C3D52A991DD9AD84002B05B5 /* FFScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D52A971DD9AD84002B05B5 /* FFScrollViewViewController.xib */; };
 /* End PBXBuildFile section */
@@ -188,35 +197,48 @@
 		C34D3DED1DD59613000AA196 /* FFToastWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToastWidget.h; sourceTree = "<group>"; };
 		C34D3DEE1DD59613000AA196 /* FFToastWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFToastWidget.m; sourceTree = "<group>"; };
 		C34D3DF01DD59630000AA196 /* FFToastWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFToastWidget.xib; sourceTree = "<group>"; };
-		C34D3DF31DD5A21C000AA196 /* FFChoosePicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChoosePicView.h; sourceTree = "<group>"; };
-		C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChoosePicView.m; sourceTree = "<group>"; };
-		C34D3DF61DD5AB07000AA196 /* FFChoosePicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChoosePicViewController.h; sourceTree = "<group>"; };
-		C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChoosePicViewController.m; sourceTree = "<group>"; };
-		C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChoosePicViewController.xib; sourceTree = "<group>"; };
-		C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@2x.png"; sourceTree = "<group>"; };
-		C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@3x.png"; sourceTree = "<group>"; };
-		C34D3DFF1DD5AEBE000AA196 /* FFActionSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActionSheetManager.h; sourceTree = "<group>"; };
-		C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActionSheetManager.m; sourceTree = "<group>"; };
 		C34D3E031DD5B3ED000AA196 /* FFChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChannelView.h; sourceTree = "<group>"; };
 		C34D3E041DD5B3ED000AA196 /* FFChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChannelView.m; sourceTree = "<group>"; };
 		C34D3E061DD5B69D000AA196 /* FFChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFChannelViewController.h; sourceTree = "<group>"; };
 		C34D3E071DD5B69D000AA196 /* FFChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFChannelViewController.m; sourceTree = "<group>"; };
 		C34D3E081DD5B69D000AA196 /* FFChannelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChannelViewController.xib; sourceTree = "<group>"; };
+		C36245D91DDAADE9005CB12F /* LYHUploadPicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHUploadPicView.h; sourceTree = "<group>"; };
+		C36245DA1DDAADE9005CB12F /* LYHUploadPicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHUploadPicView.m; sourceTree = "<group>"; };
+		C36245DB1DDAADE9005CB12F /* LYHUploadPicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYHUploadPicView.xib; sourceTree = "<group>"; };
+		C36245DF1DDAAEA2005CB12F /* FFPicChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPicChooseViewController.h; sourceTree = "<group>"; };
+		C36245E01DDAAEA2005CB12F /* FFPicChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPicChooseViewController.m; sourceTree = "<group>"; };
+		C36245E11DDAAEA2005CB12F /* FFPicChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPicChooseViewController.xib; sourceTree = "<group>"; };
+		C36245E41DDAB1A4005CB12F /* LYHRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHRootView.h; sourceTree = "<group>"; };
+		C36245E51DDAB1A4005CB12F /* LYHRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHRootView.m; sourceTree = "<group>"; };
+		C36245E71DDAB21A005CB12F /* LYHImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHImageView.h; sourceTree = "<group>"; };
+		C36245E81DDAB21A005CB12F /* LYHImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHImageView.m; sourceTree = "<group>"; };
+		C36245EA1DDAB517005CB12F /* LYHMultipleActionSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHMultipleActionSheetManager.h; sourceTree = "<group>"; };
+		C36245EB1DDAB517005CB12F /* LYHMultipleActionSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHMultipleActionSheetManager.m; sourceTree = "<group>"; };
+		C36245ED1DDAB561005CB12F /* LYHActionSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHActionSheetManager.h; sourceTree = "<group>"; };
+		C36245EE1DDAB561005CB12F /* LYHActionSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHActionSheetManager.m; sourceTree = "<group>"; };
+		C36245F01DDAB584005CB12F /* LYHUploadImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHUploadImageManager.h; sourceTree = "<group>"; };
+		C36245F11DDAB584005CB12F /* LYHUploadImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHUploadImageManager.m; sourceTree = "<group>"; };
+		C36245F31DDAB60F005CB12F /* ZYImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYImagePickerViewController.h; sourceTree = "<group>"; };
+		C36245F41DDAB60F005CB12F /* ZYImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYImagePickerViewController.m; sourceTree = "<group>"; };
+		C36245F61DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPhotoAlbumListViewController.h; sourceTree = "<group>"; };
+		C36245F71DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPhotoAlbumListViewController.m; sourceTree = "<group>"; };
+		C36245F91DDAB743005CB12F /* ZYPhotoPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPhotoPickerBaseViewController.h; sourceTree = "<group>"; };
+		C36245FA1DDAB743005CB12F /* ZyPhotoPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZyPhotoPickerBaseViewController.m; sourceTree = "<group>"; };
+		C36245FC1DDAB78C005CB12F /* ZYPhotoImageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPhotoImageListViewController.h; sourceTree = "<group>"; };
+		C36245FD1DDAB78C005CB12F /* ZYPhotoImageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPhotoImageListViewController.m; sourceTree = "<group>"; };
+		C36245FF1DDAB7AF005CB12F /* ZYPhotoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPhotoAlbumModel.h; sourceTree = "<group>"; };
+		C36246001DDAB7AF005CB12F /* ZYPhotoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPhotoAlbumModel.m; sourceTree = "<group>"; };
+		C36246021DDAB854005CB12F /* ZYPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPhotoPreviewController.h; sourceTree = "<group>"; };
+		C36246031DDAB854005CB12F /* ZYPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPhotoPreviewController.m; sourceTree = "<group>"; };
+		C36246051DDABE45005CB12F /* hzgl_zljl_tjtp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@2x.png"; sourceTree = "<group>"; };
+		C36246061DDABE45005CB12F /* hzgl_zljl_tjtp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hzgl_zljl_tjtp@3x.png"; sourceTree = "<group>"; };
+		C36246091DDABEEE005CB12F /* pic_select_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_select_click@2x.png"; sourceTree = "<group>"; };
+		C362460A1DDABEEE005CB12F /* pic_select_click@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_select_click@3x.png"; sourceTree = "<group>"; };
+		C362460B1DDABEEE005CB12F /* pic_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_select@2x.png"; sourceTree = "<group>"; };
+		C362460C1DDABEEE005CB12F /* pic_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_select@3x.png"; sourceTree = "<group>"; };
 		C3AF2F311D87AC1100341C5D /* FFAutolayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAutolayoutViewController.h; sourceTree = "<group>"; };
 		C3AF2F321D87AC1100341C5D /* FFAutolayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAutolayoutViewController.m; sourceTree = "<group>"; };
 		C3AF2F331D87AC1100341C5D /* FFAutolayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFAutolayoutViewController.xib; sourceTree = "<group>"; };
-		C3C1BA4C1DD997A300E9A027 /* FFMultipleActionSheetManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMultipleActionSheetManger.h; sourceTree = "<group>"; };
-		C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMultipleActionSheetManger.m; sourceTree = "<group>"; };
-		C3C1BA4F1DD9981000E9A027 /* FFImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFImagePickerViewController.h; sourceTree = "<group>"; };
-		C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFImagePickerViewController.m; sourceTree = "<group>"; };
-		C3C1BA521DD99A6200E9A027 /* FFPhotoPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoPickerBaseViewController.h; sourceTree = "<group>"; };
-		C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoPickerBaseViewController.m; sourceTree = "<group>"; };
-		C3C1BA551DD99AF000E9A027 /* FFPhotoAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoAlbumListViewController.h; sourceTree = "<group>"; };
-		C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoAlbumListViewController.m; sourceTree = "<group>"; };
-		C3C1BA581DD99C2F00E9A027 /* FFPhotoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoAlbumModel.h; sourceTree = "<group>"; };
-		C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoAlbumModel.m; sourceTree = "<group>"; };
-		C3C1BA5B1DD99DFB00E9A027 /* FFPhotoImageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPhotoImageListViewController.h; sourceTree = "<group>"; };
-		C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPhotoImageListViewController.m; sourceTree = "<group>"; };
 		C3D52A951DD9AD84002B05B5 /* FFScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFScrollViewViewController.h; sourceTree = "<group>"; };
 		C3D52A961DD9AD84002B05B5 /* FFScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFScrollViewViewController.m; sourceTree = "<group>"; };
 		C3D52A971DD9AD84002B05B5 /* FFScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFScrollViewViewController.xib; sourceTree = "<group>"; };
@@ -394,8 +416,8 @@
 		4FEB51241D4B1F9C00C6CA03 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				C36245D71DDAAD8B005CB12F /* viewChoosePhone */,
 				C34D3E021DD5B2FB000AA196 /* ViewMark */,
-				C34D3DF21DD5A109000AA196 /* PicView */,
 				C34D3DE31DD59354000AA196 /* Toast */,
 				C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */,
 				463DA5B01D75CE8F00F035A2 /* DemoButton */,
@@ -491,35 +513,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C34D3DF21DD5A109000AA196 /* PicView */ = {
-			isa = PBXGroup;
-			children = (
-				C34D3DFB1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png */,
-				C34D3DFC1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png */,
-				C34D3DF31DD5A21C000AA196 /* FFChoosePicView.h */,
-				C34D3DF41DD5A21C000AA196 /* FFChoosePicView.m */,
-				C34D3DF61DD5AB07000AA196 /* FFChoosePicViewController.h */,
-				C34D3DF71DD5AB07000AA196 /* FFChoosePicViewController.m */,
-				C34D3DF81DD5AB07000AA196 /* FFChoosePicViewController.xib */,
-				C34D3DFF1DD5AEBE000AA196 /* FFActionSheetManager.h */,
-				C34D3E001DD5AEBE000AA196 /* FFActionSheetManager.m */,
-				C3C1BA4C1DD997A300E9A027 /* FFMultipleActionSheetManger.h */,
-				C3C1BA4D1DD997A300E9A027 /* FFMultipleActionSheetManger.m */,
-				C3C1BA4F1DD9981000E9A027 /* FFImagePickerViewController.h */,
-				C3C1BA501DD9981000E9A027 /* FFImagePickerViewController.m */,
-				C3C1BA521DD99A6200E9A027 /* FFPhotoPickerBaseViewController.h */,
-				C3C1BA531DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m */,
-				C3C1BA551DD99AF000E9A027 /* FFPhotoAlbumListViewController.h */,
-				C3C1BA561DD99AF000E9A027 /* FFPhotoAlbumListViewController.m */,
-				C3C1BA581DD99C2F00E9A027 /* FFPhotoAlbumModel.h */,
-				C3C1BA591DD99C2F00E9A027 /* FFPhotoAlbumModel.m */,
-				C3C1BA5B1DD99DFB00E9A027 /* FFPhotoImageListViewController.h */,
-				C3C1BA5C1DD99DFB00E9A027 /* FFPhotoImageListViewController.m */,
-			);
-			name = PicView;
-			path = picView;
-			sourceTree = "<group>";
-		};
 		C34D3E021DD5B2FB000AA196 /* ViewMark */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +524,63 @@
 			);
 			name = ViewMark;
 			path = Viewmark;
+			sourceTree = "<group>";
+		};
+		C36245D71DDAAD8B005CB12F /* viewChoosePhone */ = {
+			isa = PBXGroup;
+			children = (
+				C36245DE1DDAAE45005CB12F /* ViewController */,
+				C36245D81DDAADE9005CB12F /* Views */,
+			);
+			path = viewChoosePhone;
+			sourceTree = "<group>";
+		};
+		C36245D81DDAADE9005CB12F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C36245E41DDAB1A4005CB12F /* LYHRootView.h */,
+				C36245E51DDAB1A4005CB12F /* LYHRootView.m */,
+				C36245D91DDAADE9005CB12F /* LYHUploadPicView.h */,
+				C36245DA1DDAADE9005CB12F /* LYHUploadPicView.m */,
+				C36245DB1DDAADE9005CB12F /* LYHUploadPicView.xib */,
+				C36245E71DDAB21A005CB12F /* LYHImageView.h */,
+				C36245E81DDAB21A005CB12F /* LYHImageView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C36245DE1DDAAE45005CB12F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C36246091DDABEEE005CB12F /* pic_select_click@2x.png */,
+				C362460A1DDABEEE005CB12F /* pic_select_click@3x.png */,
+				C362460B1DDABEEE005CB12F /* pic_select@2x.png */,
+				C362460C1DDABEEE005CB12F /* pic_select@3x.png */,
+				C36246051DDABE45005CB12F /* hzgl_zljl_tjtp@2x.png */,
+				C36246061DDABE45005CB12F /* hzgl_zljl_tjtp@3x.png */,
+				C36246021DDAB854005CB12F /* ZYPhotoPreviewController.h */,
+				C36246031DDAB854005CB12F /* ZYPhotoPreviewController.m */,
+				C36245FF1DDAB7AF005CB12F /* ZYPhotoAlbumModel.h */,
+				C36246001DDAB7AF005CB12F /* ZYPhotoAlbumModel.m */,
+				C36245FC1DDAB78C005CB12F /* ZYPhotoImageListViewController.h */,
+				C36245FD1DDAB78C005CB12F /* ZYPhotoImageListViewController.m */,
+				C36245F91DDAB743005CB12F /* ZYPhotoPickerBaseViewController.h */,
+				C36245FA1DDAB743005CB12F /* ZyPhotoPickerBaseViewController.m */,
+				C36245F61DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.h */,
+				C36245F71DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.m */,
+				C36245F31DDAB60F005CB12F /* ZYImagePickerViewController.h */,
+				C36245F41DDAB60F005CB12F /* ZYImagePickerViewController.m */,
+				C36245F01DDAB584005CB12F /* LYHUploadImageManager.h */,
+				C36245F11DDAB584005CB12F /* LYHUploadImageManager.m */,
+				C36245ED1DDAB561005CB12F /* LYHActionSheetManager.h */,
+				C36245EE1DDAB561005CB12F /* LYHActionSheetManager.m */,
+				C36245EA1DDAB517005CB12F /* LYHMultipleActionSheetManager.h */,
+				C36245EB1DDAB517005CB12F /* LYHMultipleActionSheetManager.m */,
+				C36245DF1DDAAEA2005CB12F /* FFPicChooseViewController.h */,
+				C36245E01DDAAEA2005CB12F /* FFPicChooseViewController.m */,
+				C36245E11DDAAEA2005CB12F /* FFPicChooseViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C3AF2F301D87ABDC00341C5D /* DemoAutoLayout */ = {
@@ -652,9 +702,8 @@
 				4FC46A7A1D4B2820009B38DC /* action_icon.png in Resources */,
 				4FC46A7C1D4B2820009B38DC /* check_icon.png in Resources */,
 				469010261D4300FC00F22725 /* Assets.xcassets in Resources */,
-				C34D3DFD1DD5AD72000AA196 /* hzgl_zljl_tjtp@2x.png in Resources */,
 				4FC46A811D4B2820009B38DC /* reload@2x.png in Resources */,
-				C34D3DFA1DD5AB07000AA196 /* FFChoosePicViewController.xib in Resources */,
+				C36245DD1DDAADE9005CB12F /* LYHUploadPicView.xib in Resources */,
 				4FC46A7D1D4B2820009B38DC /* check_icon@2x.png in Resources */,
 				C34D3E0A1DD5B69D000AA196 /* FFChannelViewController.xib in Resources */,
 				C3AF2F351D87AC1100341C5D /* FFAutolayoutViewController.xib in Resources */,
@@ -662,15 +711,21 @@
 				C34D3DF11DD59630000AA196 /* FFToastWidget.xib in Resources */,
 				4FEB51471D4B1FF300C6CA03 /* FFStringViewController.xib in Resources */,
 				469010241D4300FC00F22725 /* Main.storyboard in Resources */,
+				C362460E1DDABEEE005CB12F /* pic_select_click@3x.png in Resources */,
+				C36246101DDABEEE005CB12F /* pic_select@3x.png in Resources */,
 				4FC46A821D4B2820009B38DC /* search_icon.png in Resources */,
 				4FC46A7B1D4B2820009B38DC /* action_icon@2x.png in Resources */,
+				C36245E31DDAAEA2005CB12F /* FFPicChooseViewController.xib in Resources */,
 				4FC46A7E1D4B2820009B38DC /* home_icon.png in Resources */,
 				4F2EF8FA1D5C611E004DB9CB /* FFHeaderScollerViewController.xib in Resources */,
 				4FEB51451D4B1FF300C6CA03 /* FFRealTimeChangeViewController.xib in Resources */,
+				C362460D1DDABEEE005CB12F /* pic_select_click@2x.png in Resources */,
 				C34D3DE81DD5938B000AA196 /* FFToastViewController.xib in Resources */,
-				C34D3DFE1DD5AD72000AA196 /* hzgl_zljl_tjtp@3x.png in Resources */,
+				C362460F1DDABEEE005CB12F /* pic_select@2x.png in Resources */,
 				4FC46A831D4B2820009B38DC /* search_icon@2x.png in Resources */,
 				463DA5BA1D75D5E500F035A2 /* FFChannalVedioView.xib in Resources */,
+				C36246081DDABE45005CB12F /* hzgl_zljl_tjtp@3x.png in Resources */,
+				C36246071DDABE45005CB12F /* hzgl_zljl_tjtp@2x.png in Resources */,
 				C3D52A991DD9AD84002B05B5 /* FFScrollViewViewController.xib in Resources */,
 				4F6574B61D5C6701007386AC /* 1.jpg in Resources */,
 				4FC46A7F1D4B2820009B38DC /* home_icon@2x.png in Resources */,
@@ -701,45 +756,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3C1BA511DD9981000E9A027 /* FFImagePickerViewController.m in Sources */,
 				4F1F8FFD1D5C1A09009C6C78 /* FFPerson+Internal.m in Sources */,
-				C3C1BA571DD99AF000E9A027 /* FFPhotoAlbumListViewController.m in Sources */,
 				C34D3DEC1DD59484000AA196 /* FFRootWidget.m in Sources */,
 				4F1F8FFC1D5C1A09009C6C78 /* FFPerson.m in Sources */,
-				C3C1BA5A1DD99C2F00E9A027 /* FFPhotoAlbumModel.m in Sources */,
 				4FEB51481D4B1FF300C6CA03 /* FFRealTimeChangeView.m in Sources */,
 				C34D3DE71DD5938B000AA196 /* FFToastViewController.m in Sources */,
-				C34D3DF91DD5AB07000AA196 /* FFChoosePicViewController.m in Sources */,
 				4690104E1D43016100F22725 /* FFRootViewController.m in Sources */,
-				C3C1BA4E1DD997A300E9A027 /* FFMultipleActionSheetManger.m in Sources */,
 				C34D3E051DD5B3ED000AA196 /* FFChannelView.m in Sources */,
 				4FEB515B1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingView.m in Sources */,
+				C36245E91DDAB21A005CB12F /* LYHImageView.m in Sources */,
 				463DA5B81D75D5D000F035A2 /* FFChannalVedioView.m in Sources */,
 				4FEB515E1D4B205A00C6CA03 /* UIScrollView+JElasticPullToRefresh.m in Sources */,
 				463DA5B41D75CEAD00F035A2 /* FFButtonDemo.m in Sources */,
-				C34D3DF51DD5A21C000AA196 /* FFChoosePicView.m in Sources */,
 				4F2EF8F91D5C611E004DB9CB /* FFHeaderScollerViewController.m in Sources */,
 				C3AF2F341D87AC1100341C5D /* FFAutolayoutViewController.m in Sources */,
 				4F9AD13C1D62D84D00E84FBB /* FFChainViewController.m in Sources */,
 				C34D3E091DD5B69D000AA196 /* FFChannelViewController.m in Sources */,
-				C34D3E011DD5AEBE000AA196 /* FFActionSheetManager.m in Sources */,
-				C3C1BA541DD99A6200E9A027 /* FFPhotoPickerBaseViewController.m in Sources */,
+				C36245E61DDAB1A4005CB12F /* LYHRootView.m in Sources */,
+				C36246011DDAB7AF005CB12F /* ZYPhotoAlbumModel.m in Sources */,
+				C36245FE1DDAB78C005CB12F /* ZYPhotoImageListViewController.m in Sources */,
 				4FEB51491D4B1FF300C6CA03 /* FFRootView.m in Sources */,
 				469010211D4300FC00F22725 /* ViewController.m in Sources */,
 				4690101E1D4300FC00F22725 /* AppDelegate.m in Sources */,
 				C34D3DEF1DD59613000AA196 /* FFToastWidget.m in Sources */,
 				4FEB515C1D4B205A00C6CA03 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
 				C3D52A981DD9AD84002B05B5 /* FFScrollViewViewController.m in Sources */,
+				C36245F81DDAB6AA005CB12F /* ZYPhotoAlbumListViewController.m in Sources */,
+				C36245EF1DDAB561005CB12F /* LYHActionSheetManager.m in Sources */,
+				C36245FB1DDAB743005CB12F /* ZyPhotoPickerBaseViewController.m in Sources */,
 				4F1F8FFB1D5C1A09009C6C78 /* FFOther.m in Sources */,
 				4FEB514D1D4B203D00C6CA03 /* FFJElasticPullToRefreshViewController.m in Sources */,
-				C3C1BA5D1DD99DFB00E9A027 /* FFPhotoImageListViewController.m in Sources */,
+				C36245F21DDAB584005CB12F /* LYHUploadImageManager.m in Sources */,
 				466408441D64A96E00AF028A /* FFRunLoopViewController.m in Sources */,
+				C36245EC1DDAB517005CB12F /* LYHMultipleActionSheetManager.m in Sources */,
+				C36246041DDAB854005CB12F /* ZYPhotoPreviewController.m in Sources */,
+				C36245E21DDAAEA2005CB12F /* FFPicChooseViewController.m in Sources */,
 				4FEB515F1D4B205A00C6CA03 /* UIView+JElasticPullToRefresh.m in Sources */,
 				4F9AD1401D62E04600E84FBB /* CaculatorMaker.m in Sources */,
 				4FEB51441D4B1FF300C6CA03 /* FFRealTimeChangeViewController.m in Sources */,
 				4FC46A791D4B2820009B38DC /* KxMenu.m in Sources */,
 				4690101B1D4300FC00F22725 /* main.m in Sources */,
+				C36245F51DDAB60F005CB12F /* ZYImagePickerViewController.m in Sources */,
 				4FC46A6B1D4B27A6009B38DC /* FFMenuViewController.m in Sources */,
+				C36245DC1DDAADE9005CB12F /* LYHUploadPicView.m in Sources */,
 				4FEB51461D4B1FF300C6CA03 /* FFStringViewController.m in Sources */,
 				4FEB515D1D4B205A00C6CA03 /* JElasticPullToRefreshView.m in Sources */,
 			);
