@@ -10,7 +10,7 @@
 #import "LYHMultipleActionSheetManager.h"
 #import "LYHImageView.h"
 
-@interface FFPicChooseViewController ()<LYHUploadPicViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface FFPicChooseViewController ()<LYHUploadPicViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ZYImagePickerDelegate>
 @property (nonatomic,strong) LYHUploadPicView *viewUploadPic;
 @property (nonatomic, strong) LYHMultipleActionSheetManager *actionManager;
 @property (nonatomic,strong) NSMutableArray *arraypics;
@@ -48,7 +48,6 @@
 //    self.heightCellPic = height >1 ? (height +20):height;
 }
 
-
 #pragma mark event response  事件响应
 
 #pragma mark delegate 协议方法
@@ -58,6 +57,7 @@
 - (void)uploadPicviewDelegatePicIndex:(NSUInteger)index  pictureId:(NSNumber*)pictureId {
 
 }
+
 - (void)uploadPicviewAddPic {
     
     if (self.actionManager) {
@@ -78,18 +78,31 @@
     };
     [self.actionManager openCameraAndPhotoLibrarySheetWithViewController:self];
 }
-
+//拿到选择的 图片
+- (void)zweiImagePicker:(ZYImagePickerViewController *)picker didSelectedImages:(NSArray <UIImage *>*)imageArray {
+    for (int i = 0; i < imageArray.count; i ++) {
+        id obj = imageArray[i];
+        if ([obj isKindOfClass:[UIImage class]]) {
+            UIImage *imageObj = (UIImage *)obj;
+            LYHImageView *imageView = [[LYHImageView alloc]init];
+            imageView.image = imageObj;
+//            [imageView fillImageUrlString:nil];
+            [self.arraypics addObject:imageView];
+            [self fillCellPicWithArrayPics:self.arraypics];
+        }
+    }
+}
 
 #pragma mark  getter setter ==============================
 
--(NSMutableArray *)arraypics{
+-(NSMutableArray *)arraypics {
     if (!_arraypics) {
         _arraypics = [NSMutableArray array];
-        for (int i = 0 ; i < 1; i ++) {
-            LYHImageView *view = [[LYHImageView alloc]init];
-            view.image = [UIImage imageNamed:@"111.jpg"];
-            [_arraypics addObject:view];
-        }
+//        for (int i = 0 ; i < 1; i ++) {
+//            LYHImageView *view = [[LYHImageView alloc]init];
+//            view.image = [UIImage imageNamed:@"111.jpg"];
+//            [_arraypics addObject:view];
+//        }
     }
     return _arraypics;
 }

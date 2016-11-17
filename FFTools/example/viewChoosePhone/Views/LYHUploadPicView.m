@@ -23,7 +23,6 @@
 @end
 
 @implementation LYHUploadPicView
-//#define maxViewCount 6
 #define spaceWidth 5
 #define spaceHeight 5
 #define viewRight (self.widthPicViewContainer)
@@ -52,8 +51,6 @@
     }
     if (self.widthPicViewContainer) {
         self.widthPicViewContainer = widthPicViewContainer;
-        
-        
     }
 }
 
@@ -62,6 +59,9 @@
     
     self.isFull =  arrayPic.count >= self.maxCountPic ? YES :NO;
     self.arrayPicViews = arrayPic;
+    
+    [self.arrayAllViews removeAllObjects];
+    
 
     CGFloat  viewW = ((self.widthPicViewContainer - self.spaceWidthOutside*2) -  2*self.spaceWidthInside)/3;
     if (self.isNeedChange) {
@@ -132,9 +132,10 @@
     UIButton *btn = [[UIButton alloc]init];
     btn.tag = picview.tag;
     [btn setBackgroundImage:[UIImage imageNamed:@"hzgl_zljl_delete.png"] forState:UIControlStateNormal];
-    [self addSubview:btn];
-    btn.frame = CGRectMake(picview.right - 25, picview.bottom - 25, 25, 25);
+    [picview addSubview:btn];
+    btn.frame = CGRectMake(picview.width - 25, picview.height - 25, 25, 25);
     [btn addTarget:self action:@selector(onClickDeletePic:) forControlEvents:UIControlEventTouchUpInside];
+    picview.userInteractionEnabled = YES;
 }
 
 //删除图片
@@ -147,13 +148,30 @@
     
     if ([obj isKindOfClass:[LYHImageView class]]) {
         LYHImageView *viewImage = (LYHImageView*)obj;
-        if (viewImage.imageURLString) {
+//        if (viewImage.imageURLString) {
             urlDelete = viewImage.imageURLString;
             pictureId = viewImage.pictureId;
-        }
+
+        [((LYHImageView*)obj) removeFromSuperview];
+        
+        [self.arrayAllViews removeObject:obj];
+        [self.arrayPicViews removeObject:obj];
+        
+            //删除
+//          [self.arrayPicViews removeObjectAtIndex:btn.tag];
+            [self reSortPositionWithArrayPic:self.arrayPicViews];
+        [self setNeedsLayout];
+        [self setNeedsDisplay];
+//        }
     }
     //删除图片
-    [self.delegate uploadPicviewDelegatePicIndex:btn.tag pictureId:pictureId];
+//    [self.delegate uploadPicviewDelegatePicIndex:btn.tag pictureId:pictureId];
+}
+
+-(NSMutableArray *)getAllPic {
+    
+    return self.arrayPicViews;
+
 }
 //增加一张图片
 -(void)onClickAddPic:(UIButton* )btn {
